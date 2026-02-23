@@ -69,11 +69,10 @@ body {
 
 /* ===== Hero ===== */
 .work-hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 10vw 10vh;
+  padding: 120px 10vw 10vh;
   position: relative;
   overflow: hidden;
 }
