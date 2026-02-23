@@ -71,7 +71,8 @@ export function initAnimations(faceGroup, setModelIndex) {
       // About — House Dancing
       setModelIndex?.(1);
       const t = Math.min((scrollY - (aboutTop - wh * 0.5)) / wh, 1);
-      posTarget.x      = -1.5 * t;
+      const isMobile = window.innerWidth <= 768;
+      posTarget.x      = isMobile ? 0.5 * t : -1.5 * t;
       posTarget.z      = 0;
       state.scrollScale = 1.0 - 0.1 * t;
     } else if (scrollY < contactTop - wh * 0.5) {
