@@ -6,7 +6,8 @@
     "serve:static": "http-server -p 8080 -c-1 --cors"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "sharp": "^0.34.5"
   },
   "dependencies": {
     "express": "^5.2.1"

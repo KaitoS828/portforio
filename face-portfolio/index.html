@@ -4,13 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://esm.sh">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
   <!-- Primary SEO -->
   <title>Sekimoto Kaito | Creative Developer & Designer</title>
   <meta name="description" content="フロントエンドからバックエンドまで、Three.js 3D・AI・インタラクティブアートを組み合わせたプロダクトを制作する Creative Developer のポートフォリオ。">
   <meta name="keywords" content="Sekimoto Kaito, 関本海斗, ポートフォリオ, Creative Developer, フロントエンドエンジニア, Three.js, React, AI, Web Developer, 3Dポートフォリオ">
   <meta name="author" content="Sekimoto Kaito">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
   <link rel="canonical" href="https://portforio-liard.vercel.app/">
+
+  <!-- Favicon -->
+  <link rel="icon"             href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon"    href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/og-image.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#00f5ff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KaitoS Portfolio">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
@@ -18,30 +38,46 @@
   <meta property="og:title"       content="Sekimoto Kaito | Creative Developer & Designer">
   <meta property="og:description" content="フロントエンドからバックエンドまで、Three.js 3D・AI・インタラクティブアートを組み合わせたプロダクトを制作する Creative Developer のポートフォリオ。">
   <meta property="og:image"       content="https://portforio-liard.vercel.app/assets/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="Sekimoto Kaito Portfolio">
   <meta property="og:locale"      content="ja_JP">
   <meta property="og:site_name"   content="Sekimoto Kaito Portfolio">
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@KaitoS828">
+  <meta name="twitter:creator"     content="@KaitoS828">
   <meta name="twitter:title"       content="Sekimoto Kaito | Creative Developer & Designer">
   <meta name="twitter:description" content="フロントエンドからバックエンドまで、Three.js 3D・AI・インタラクティブアートを組み合わせたプロダクトを制作する Creative Developer のポートフォリオ。">
   <meta name="twitter:image"       content="https://portforio-liard.vercel.app/assets/og-image.png">
+  <meta name="twitter:image:alt"   content="Sekimoto Kaito Portfolio">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sekimoto Kaito",
-    "alternateName": "関本海斗",
-    "url": "https://portforio-liard.vercel.app/",
-    "jobTitle": "Creative Developer & Designer",
-    "description": "フロントエンドからバックエンドまで、Three.js・AI・インタラクティブアートを組み合わせたプロダクトを制作する Creative Developer。",
-    "sameAs": [
-      "https://github.com/KaitoS828"
-    ],
-    "knowsAbout": ["Three.js", "React", "Next.js", "FastAPI", "LangGraph", "AI", "3D Web", "Ruby on Rails"]
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sekimoto Kaito",
+      "alternateName": "関本海斗",
+      "url": "https://portforio-liard.vercel.app/",
+      "image": "https://portforio-liard.vercel.app/assets/og-image.png",
+      "jobTitle": "Creative Developer & Designer",
+      "description": "フロントエンドからバックエンドまで、Three.js・AI・インタラクティブアートを組み合わせたプロダクトを制作する Creative Developer。",
+      "sameAs": ["https://github.com/KaitoS828"],
+      "knowsAbout": ["Three.js", "React", "Next.js", "FastAPI", "LangGraph", "AI", "3D Web", "Ruby on Rails"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://portforio-liard.vercel.app/",
+      "name": "Sekimoto Kaito Portfolio",
+      "description": "Creative Developer & Designer のポートフォリオサイト",
+      "inLanguage": "ja",
+      "author": { "@type": "Person", "name": "Sekimoto Kaito" }
+    }
+  ]
   </script>
 
   <link rel="stylesheet" href="css/style.css">
