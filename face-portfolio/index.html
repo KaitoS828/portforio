@@ -270,15 +270,21 @@
         // Works
         setHtml('js-works-heading', (d.works?.heading || '').replace(/\n/g, '<br>'));
         if (d.works?.cards) {
-          document.getElementById('js-works-grid').innerHTML = d.works.cards.map((c, i) => `
-            <div class="work-card" data-index="${i}" onclick="location.href='${c.link}'" style="cursor:pointer">
+          document.getElementById('js-works-grid').innerHTML = d.works.cards.map((c, i) => {
+            const onClick = c.link.startsWith('http')
+              ? `window.open('${c.link}', '_blank')`
+              : `location.href='${c.link}'`;
+            const label = c.link.startsWith('http') ? 'View on GitHub →' : 'View Project →';
+            return `
+            <div class="work-card" data-index="${i}" onclick="${onClick}" style="cursor:pointer">
               <div class="work-card-inner">
                 <div class="work-tag">${c.tag}</div>
                 <h3>${c.title}</h3>
                 <p>${c.desc}</p>
-                <div class="work-link">View Project →</div>
+                <div class="work-link">${label}</div>
               </div>
-            </div>`).join('');
+            </div>`;
+          }).join('');
         }
 
         // Contact
