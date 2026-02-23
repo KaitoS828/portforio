@@ -64,8 +64,15 @@ function injectWork(w) {
   set('.js-type',  w.type);
 
   // Mock
-  set('.js-mock-url',   w.mockUrl);
-  set('.js-mock-label', w.mockLabel);
+  set('.js-mock-url', w.mockUrl);
+  const mockContent = document.querySelector('.js-mock-label');
+  if (mockContent) {
+    if (w.mockImage) {
+      mockContent.innerHTML = `<img src="${w.mockImage}" alt="${w.title} screenshot">`;
+    } else {
+      mockContent.textContent = w.mockLabel;
+    }
+  }
 
   // Overview
   setHtml('.js-overview-heading', w.overviewHeading.replace(/\n/g, '<br>'));

@@ -671,7 +671,10 @@
           <div class="form-section-title">Mock Screen</div>
           <div class="form-grid">
             ${field('URL Label', 'mockUrl', w.mockUrl)}
-            ${field('Display Text', 'mockLabel', w.mockLabel)}
+            ${field('Display Text (画像なし時)', 'mockLabel', w.mockLabel)}
+          </div>
+          <div class="form-grid cols-1" style="margin-top:16px">
+            ${field('Screenshot Image URL (設定すると画像表示)', 'mockImage', w.mockImage || '')}
           </div>
         </div>
 
