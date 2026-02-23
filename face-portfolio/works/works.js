@@ -42,7 +42,7 @@ document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
 // ===== Load & inject data from data.json =====
 const workId = document.body.dataset.workId;
 if (workId) {
-  fetch('/api/works')
+  fetch('/works/data.json')
     .then(r => r.json())
     .then(data => {
       const w = data[workId];

@@ -1,1 +1,146 @@
-{}
+{
+  "the-board": {
+    "id": "the-board",
+    "title": "The Board",
+    "tag": "AI / Web App",
+    "role": "Full Stack Engineer",
+    "year": "2025",
+    "type": "Personal Project",
+    "mockUrl": "the-board.vercel.app",
+    "mockLabel": "AI Multi-Agent Boardroom",
+    "overviewHeading": "AIエージェントが\n議論するプラットフォーム",
+    "overviewBody": "複数のAIエージェントがリアルタイムで議論・意思決定を行うウェブアプリケーション。ビジネスプランの策定から批判的レビューまで、AIが自律的に協働するプロセスを可視化します。",
+    "leftLabel": "Features",
+    "leftItems": [
+      "マルチエージェント討論（Free / Pro / Enterprise）",
+      "God Mode：議論の方向をリアルタイム制御",
+      "Red Alert：緊急介入システム",
+      "Business Plan Wizard（11問 × 5カテゴリ）",
+      "Critical Review（Shadow Architect + Toxic Customer）"
+    ],
+    "rightLabel": "Technical Highlights",
+    "rightItems": [
+      "LangGraph によるエージェントオーケストレーション",
+      "SSE ストリーミングでリアルタイム出力",
+      "Gemini API（structured output）",
+      "PDF エクスポート（window.print）",
+      "Next.js Rewrite で API プロキシ統合"
+    ],
+    "techStack": ["Next.js 15", "FastAPI", "LangGraph", "Gemini API", "Tailwind CSS 4", "Python", "TypeScript"],
+    "ctaHeading": "AIが議論する場を\n体験してください",
+    "liveUrl": "#",
+    "githubUrl": "https://github.com/KaitoS828/the-board",
+    "prev": null,
+    "next": "face-portfolio",
+    "prevLabel": "",
+    "nextLabel": "Face Portfolio"
+  },
+  "face-portfolio": {
+    "id": "face-portfolio",
+    "title": "Face Portfolio",
+    "tag": "3D / Portfolio",
+    "role": "Frontend Engineer",
+    "year": "2025",
+    "type": "Personal Project",
+    "mockUrl": "portforio.vercel.app",
+    "mockLabel": "3D Interactive Portfolio",
+    "overviewHeading": "3Dキャラクターと共に\n魅せるポートフォリオ",
+    "overviewBody": "Three.js を活用した3Dキャラクターアニメーションをメインビジュアルに据えたポートフォリオサイト。スクロールに連動してキャラクターが切り替わり、サイト全体でインタラクティブな体験を提供します。",
+    "leftLabel": "Features",
+    "leftItems": [
+      "セクション連動3Dモデル切り替え（4体）",
+      "Draco圧縮でモデルを最大86%軽量化",
+      "ホバー・クリックでエミッシブグロー演出",
+      "スクロール型・パネル型の2レイアウト",
+      "Works Admin（GitHub自動push対応）"
+    ],
+    "rightLabel": "Technical Highlights",
+    "rightItems": [
+      "GLTFLoader + DRACOLoader による効率的なモデルロード",
+      "UnrealBloomPass でシネマティックなブルーム効果",
+      "Raycasting によるメッシュ単位のインタラクション",
+      "IntersectionObserver でスクロール連動アニメーション",
+      "Express API + GitHub REST API でコンテンツ管理"
+    ],
+    "techStack": ["Three.js", "GLSL", "Express.js", "GitHub API", "Vanilla JS", "CSS"],
+    "ctaHeading": "このサイト自体が\nポートフォリオです",
+    "liveUrl": "#",
+    "githubUrl": "https://github.com/KaitoS828/portforio",
+    "prev": "the-board",
+    "next": "remotion",
+    "prevLabel": "The Board",
+    "nextLabel": "Remotion Video"
+  },
+  "remotion": {
+    "id": "remotion",
+    "title": "Remotion Video",
+    "tag": "Video / React",
+    "role": "Frontend Engineer",
+    "year": "2025",
+    "type": "Personal Project",
+    "mockUrl": "remotion-project.vercel.app",
+    "mockLabel": "Programmatic Video Generation",
+    "overviewHeading": "Reactでコードから\n動画を生成する",
+    "overviewBody": "Remotion を使用し、React コンポーネントとして動画を制作するプロジェクト。アニメーション・テキスト・音声をプログラマブルに組み合わせ、コードから映像表現を実現します。",
+    "leftLabel": "Features",
+    "leftItems": [
+      "React コンポーネントで動画構成を定義",
+      "フレーム単位のアニメーション制御",
+      "VOICEVOX との音声連携テンプレート",
+      "タイムライン管理と素材の合成",
+      "MP4 エクスポート対応"
+    ],
+    "rightLabel": "Technical Highlights",
+    "rightItems": [
+      "Remotion の interpolate / spring API を活用",
+      "useCurrentFrame でフレーム同期アニメーション",
+      "Sequence コンポーネントでシーン管理",
+      "Tailwind CSS でスタイリング",
+      "Node.js API でレンダリングジョブ管理"
+    ],
+    "techStack": ["Remotion", "React", "TypeScript", "VOICEVOX", "Node.js", "Tailwind CSS"],
+    "ctaHeading": "コードで動画を\nつくる新しい体験",
+    "liveUrl": "#",
+    "githubUrl": "https://github.com/KaitoS828/remotion-voicevox-template",
+    "prev": "face-portfolio",
+    "next": "freemarket",
+    "prevLabel": "Face Portfolio",
+    "nextLabel": "Freemarket App"
+  },
+  "freemarket": {
+    "id": "freemarket",
+    "title": "Freemarket App",
+    "tag": "Web App / Rails",
+    "role": "Backend Engineer",
+    "year": "2024",
+    "type": "Training Project",
+    "mockUrl": "freemarket-app.example.com",
+    "mockLabel": "Flea Market Platform",
+    "overviewHeading": "Ruby on Railsで構築した\nフリマアプリ",
+    "overviewBody": "プログラミングスクール（CoachTech）の学習課題として制作したフリマアプリ。商品出品・購入・ユーザー認証など、ECサイトの基本機能を一通り実装しています。",
+    "leftLabel": "Features",
+    "leftItems": [
+      "ユーザー登録・ログイン（Devise）",
+      "商品の出品・編集・削除",
+      "商品一覧・詳細ページ",
+      "PAY.JP を使った決済機能",
+      "画像アップロード（Active Storage）"
+    ],
+    "rightLabel": "Technical Highlights",
+    "rightItems": [
+      "Ruby on Rails MVC アーキテクチャ",
+      "RSpec によるユニット・統合テスト",
+      "Devise + CanCanCan で認証・認可",
+      "AWS S3 + Active Storage で画像管理",
+      "Heroku へのデプロイ"
+    ],
+    "techStack": ["Ruby on Rails", "Ruby", "MySQL", "RSpec", "AWS S3", "Heroku", "HTML/CSS"],
+    "ctaHeading": "基礎から積み上げた\nECの実装力",
+    "liveUrl": "#",
+    "githubUrl": "https://github.com/KaitoS828/coachtech_freemarket",
+    "prev": "remotion",
+    "next": null,
+    "prevLabel": "Remotion Video",
+    "nextLabel": ""
+  }
+}
