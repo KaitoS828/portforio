@@ -5,8 +5,9 @@ const path    = require('path');
 const app    = express();
 const PORT   = 8080;
 const ROOT   = __dirname;
-const CONFIG = path.join(ROOT, 'config.json');
-const DATA   = path.join(ROOT, 'works/data.json');
+const CONFIG    = path.join(ROOT, 'config.json');
+const DATA      = path.join(ROOT, 'works/data.json');
+const SITE_DATA = path.join(ROOT, 'site-data.json');
 
 app.use(express.json());
 app.use(express.static(ROOT));
@@ -122,6 +123,39 @@ app.post('/api/works', async (req, res) => {
     if (gh?.token && gh?.owner && gh?.repo) {
       try {
         const result = await pushToGitHub(gh, content);
+        const sha = result.content?.sha || result.commit?.sha || '';
+        return res.json({ ok: true, github: { ok: true, sha: sha.slice(0, 7) } });
+      } catch (ghErr) {
+        return res.json({ ok: true, github: { error: ghErr.message } });
+      }
+    }
+
+    res.json({ ok: true, github: null });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// GET site data
+app.get('/api/site', (req, res) => {
+  try {
+    res.json(JSON.parse(fs.readFileSync(SITE_DATA, 'utf8')));
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to read site-data.json' });
+  }
+});
+
+// POST site data (save + optional GitHub push)
+app.post('/api/site', async (req, res) => {
+  try {
+    const content = JSON.stringify(req.body, null, 2);
+    fs.writeFileSync(SITE_DATA, content, 'utf8');
+
+    const cfg = readConfig();
+    const gh  = cfg.github;
+    if (gh?.token && gh?.owner && gh?.repo) {
+      try {
+        const result = await pushToGitHub({ ...gh, filePath: 'site-data.json' }, content);
         const sha = result.content?.sha || result.commit?.sha || '';
         return res.json({ ok: true, github: { ok: true, sha: sha.slice(0, 7) } });
       } catch (ghErr) {

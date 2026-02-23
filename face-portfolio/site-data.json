@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "logo": "FP"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Sekimoto\nKaito",
+    "title": "Creative Developer & Designer",
+    "ctaPrimary": "View Works",
+    "ctaSecondary": "Contact"
+  },
+  "about": {
+    "heading": "Crafting digital\nexperiences that\nresonate",
+    "body": "フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。3Dビジュアル・インタラクティブアート・AIを組み合わせた、誰も見たことのない体験を追求しています。",
+    "stats": [
+      { "num": "3+", "label": "Years Exp." },
+      { "num": "20+", "label": "Projects" },
+      { "num": "∞", "label": "Curiosity" }
+    ]
+  },
+  "works": {
+    "heading": "Selected\nProjects",
+    "cards": [
+      { "id": "the-board",      "tag": "AI × UX",       "title": "The Board",       "desc": "マルチエージェントAIが議論するリアルタイムボードルームシミュレーター。FastAPI + LangGraph + Gemini。",      "link": "works/the-board.html" },
+      { "id": "face-portfolio", "tag": "3D × Web",       "title": "Face Portfolio",  "desc": "Three.jsとGLBモデルを使ったインタラクティブな3Dポートフォリオ。このサイト自体。",                        "link": "works/face-portfolio.html" },
+      { "id": "remotion",       "tag": "Motion × React", "title": "Remotion Video",  "desc": "Reactで動画を生成するモーショングラフィックスエンジン。コードで映像を作る次世代アプローチ。",            "link": "works/remotion.html" },
+      { "id": "freemarket",     "tag": "Full Stack",     "title": "Freemarket App",  "desc": "Ruby on Railsで構築したフリーマーケットプラットフォーム。決済・認証・画像管理を実装。",                   "link": "works/freemarket.html" }
+    ]
+  },
+  "contact": {
+    "heading": "Let's Create\nSomething\nTogether",
+    "desc": "新しいプロジェクト・コラボレーション・お仕事のご依頼はお気軽にどうぞ。",
+    "links": [
+      { "label": "Email",   "icon": "✉", "href": "mailto:hello@example.com" },
+      { "label": "GitHub",  "icon": "⌘", "href": "https://github.com/KaitoS828" },
+      { "label": "Twitter", "icon": "◈", "href": "https://twitter.com" }
+    ]
+  }
+}

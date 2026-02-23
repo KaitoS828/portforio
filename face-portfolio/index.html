@@ -13,7 +13,7 @@
 
   <!-- Navigation -->
   <nav id="nav">
-    <div class="nav-logo">FP</div>
+    <div class="nav-logo" id="js-nav-logo">FP</div>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -25,12 +25,12 @@
   <!-- Hero Section -->
   <section id="hero">
     <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Sekimoto<br>Kaito</h1>
-      <p class="hero-title">Creative Developer &amp; Designer</p>
+      <p class="hero-greeting" id="js-hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name" id="js-hero-name">Sekimoto<br>Kaito</h1>
+      <p class="hero-title" id="js-hero-title">Creative Developer &amp; Designer</p>
       <div class="hero-cta">
-        <a href="#works" class="btn-primary">View Works</a>
-        <a href="#contact" class="btn-secondary">Contact</a>
+        <a href="#works" class="btn-primary" id="js-cta-primary">View Works</a>
+        <a href="#contact" class="btn-secondary" id="js-cta-secondary">Contact</a>
       </div>
     </div>
     <div class="scroll-hint">
@@ -44,9 +44,9 @@
     <div class="about-inner">
       <div class="about-text">
         <span class="section-label">About</span>
-        <h2>Crafting digital<br>experiences that<br><em>resonate</em></h2>
-        <p>フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。3Dビジュアル・インタラクティブアート・AIを組み合わせた、誰も見たことのない体験を追求しています。</p>
-        <div class="about-stats">
+        <h2 id="js-about-heading">Crafting digital<br>experiences that<br><em>resonate</em></h2>
+        <p id="js-about-body">フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。3Dビジュアル・インタラクティブアート・AIを組み合わせた、誰も見たことのない体験を追求しています。</p>
+        <div class="about-stats" id="js-about-stats">
           <div class="stat">
             <span class="stat-num">3+</span>
             <span class="stat-label">Years Exp.</span>
@@ -68,8 +68,8 @@
   <section id="works">
     <div class="works-inner">
       <span class="section-label">Works</span>
-      <h2>Selected<br>Projects</h2>
-      <div class="works-grid">
+      <h2 id="js-works-heading">Selected<br>Projects</h2>
+      <div class="works-grid" id="js-works-grid">
         <div class="work-card" data-index="0" onclick="location.href='works/the-board.html'" style="cursor:pointer">
           <div class="work-card-inner">
             <div class="work-tag">AI × UX</div>
@@ -110,14 +110,14 @@
   <section id="contact">
     <div class="contact-inner">
       <span class="section-label">Contact</span>
-      <h2>Let's Create<br>Something<br><em>Together</em></h2>
-      <p class="contact-desc">新しいプロジェクト・コラボレーション・お仕事のご依頼はお気軽にどうぞ。</p>
-      <div class="contact-links">
+      <h2 id="js-contact-heading">Let's Create<br>Something<br><em>Together</em></h2>
+      <p class="contact-desc" id="js-contact-desc">新しいプロジェクト・コラボレーション・お仕事のご依頼はお気軽にどうぞ。</p>
+      <div class="contact-links" id="js-contact-links">
         <a href="mailto:hello@example.com" class="contact-link">
           <span class="contact-icon">✉</span>
           <span>Email</span>
         </a>
-        <a href="https://github.com" target="_blank" class="contact-link">
+        <a href="https://github.com/KaitoS828" target="_blank" class="contact-link">
           <span class="contact-icon">⌘</span>
           <span>GitHub</span>
         </a>
@@ -159,5 +159,60 @@
   </div>
 
   <script type="module" src="js/main.js"></script>
+
+  <script>
+    fetch('/site-data.json')
+      .then(r => r.json())
+      .then(d => {
+        const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+        const setHtml = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
+
+        // Nav
+        set('js-nav-logo', d.nav?.logo);
+
+        // Hero
+        set('js-hero-greeting', d.hero?.greeting);
+        setHtml('js-hero-name', (d.hero?.name || '').replace(/\n/g, '<br>'));
+        set('js-hero-title', d.hero?.title);
+        set('js-cta-primary', d.hero?.ctaPrimary);
+        set('js-cta-secondary', d.hero?.ctaSecondary);
+
+        // About
+        const ah = (d.about?.heading || '').split('\n');
+        setHtml('js-about-heading', ah.map((l, i) => i === ah.length - 1 ? `<em>${l}</em>` : l).join('<br>'));
+        set('js-about-body', d.about?.body);
+        if (d.about?.stats) {
+          document.getElementById('js-about-stats').innerHTML = d.about.stats.map(s =>
+            `<div class="stat"><span class="stat-num">${s.num}</span><span class="stat-label">${s.label}</span></div>`
+          ).join('');
+        }
+
+        // Works
+        setHtml('js-works-heading', (d.works?.heading || '').replace(/\n/g, '<br>'));
+        if (d.works?.cards) {
+          document.getElementById('js-works-grid').innerHTML = d.works.cards.map((c, i) => `
+            <div class="work-card" data-index="${i}" onclick="location.href='${c.link}'" style="cursor:pointer">
+              <div class="work-card-inner">
+                <div class="work-tag">${c.tag}</div>
+                <h3>${c.title}</h3>
+                <p>${c.desc}</p>
+                <div class="work-link">View Project →</div>
+              </div>
+            </div>`).join('');
+        }
+
+        // Contact
+        setHtml('js-contact-heading', (d.contact?.heading || '').replace(/\n/g, '<br>'));
+        set('js-contact-desc', d.contact?.desc);
+        if (d.contact?.links) {
+          document.getElementById('js-contact-links').innerHTML = d.contact.links.map(l =>
+            `<a href="${l.href}" class="contact-link" ${l.href.startsWith('http') ? 'target="_blank"' : ''}>
+              <span class="contact-icon">${l.icon}</span><span>${l.label}</span>
+            </a>`
+          ).join('');
+        }
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>

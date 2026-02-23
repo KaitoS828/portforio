@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Admin</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:       #0a0a0a;
+      --surface:  #111111;
+      --surface2: #191919;
+      --border:   rgba(255,255,255,0.08);
+      --border2:  rgba(255,255,255,0.14);
+      --white:    #ffffff;
+      --grey1:    rgba(255,255,255,0.65);
+      --grey2:    rgba(255,255,255,0.35);
+      --cyan:     #00f5ff;
+      --red:      #ff4444;
+      --green:    #00e676;
+    }
+
+    html, body { height: 100%; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--white); display: flex; overflow: hidden; }
+
+    /* Sidebar */
+    aside {
+      width: 220px; flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      height: 100vh; overflow-y: auto;
+    }
+
+    .sidebar-header { padding: 28px 20px 20px; border-bottom: 1px solid var(--border); }
+    .sidebar-header h1 { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+    .sidebar-header p  { font-size: 11px; color: var(--grey2); margin-top: 4px; }
+
+    .nav-links { padding: 12px; flex: 1; }
+
+    .nav-item {
+      padding: 12px 16px; border-radius: 8px; cursor: pointer;
+      transition: background 0.15s; margin-bottom: 4px;
+      font-size: 13px; font-weight: 300; color: var(--grey1);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-item:hover { background: var(--surface2); color: var(--white); }
+    .nav-item.active { background: rgba(0,245,255,0.08); border: 1px solid rgba(0,245,255,0.2); color: var(--cyan); }
+
+    .nav-item-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+
+    .sidebar-links { padding: 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-link { font-size: 11px; color: var(--grey2); text-decoration: none; transition: color 0.2s; }
+    .sidebar-link:hover { color: var(--cyan); }
+
+    /* Main */
+    main { flex: 1; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+    .top-bar {
+      height: 64px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; flex-shrink: 0;
+    }
+    .top-bar-title { font-size: 13px; font-weight: 400; color: var(--grey1); }
+    .top-bar-title span { color: var(--white); font-weight: 500; }
+    .top-actions { display: flex; gap: 12px; align-items: center; }
+
+    .btn-save {
+      padding: 9px 24px; background: var(--white); color: var(--bg);
+      border: none; font-family: 'Inter', sans-serif; font-size: 12px;
+      font-weight: 500; letter-spacing: 0.08em; cursor: pointer;
+      transition: opacity 0.2s; border-radius: 4px;
+    }
+    .btn-save:hover { opacity: 0.85; }
+    .btn-save:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .save-status { font-size: 11px; color: var(--grey2); min-width: 80px; text-align: right; }
+    .save-status.saved { color: var(--green); }
+    .save-status.error { color: var(--red); }
+
+    /* Form */
+    .form-area { flex: 1; overflow-y: auto; padding: 40px 48px; }
+
+    .form-section { margin-bottom: 48px; }
+    .form-section-title {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-grid.cols-1 { grid-template-columns: 1fr; }
+    .form-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field label { font-size: 11px; font-weight: 400; letter-spacing: 0.08em; color: var(--grey2); text-transform: uppercase; }
+    .field input, .field textarea {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 10px 14px; color: var(--white); font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 300; outline: none; transition: border-color 0.2s; resize: vertical;
+    }
+    .field input:focus, .field textarea:focus { border-color: rgba(0,245,255,0.4); }
+    .field textarea { min-height: 70px; }
+
+    /* Stat / Link rows */
+    .row-group { display: flex; flex-direction: column; gap: 10px; }
+    .row-item {
+      display: grid; gap: 12px; align-items: center;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 14px 16px;
+    }
+    .row-item.stats-row  { grid-template-columns: 1fr 2fr; }
+    .row-item.links-row  { grid-template-columns: 40px 2fr 3fr; }
+    .row-item.card-row   { grid-template-columns: 1fr 1fr; }
+
+    .row-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey2); margin-bottom: 6px; }
+
+    .row-item input {
+      background: transparent; border: none; border-bottom: 1px solid var(--border);
+      padding: 6px 0; color: var(--white); font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 300; outline: none; width: 100%;
+      transition: border-color 0.2s;
+    }
+    .row-item input:focus { border-bottom-color: rgba(0,245,255,0.4); }
+
+    .row-item textarea {
+      background: transparent; border: none; border-bottom: 1px solid var(--border);
+      padding: 6px 0; color: var(--white); font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 300; outline: none; width: 100%;
+      resize: none; min-height: 52px; transition: border-color 0.2s; line-height: 1.6;
+    }
+    .row-item textarea:focus { border-bottom-color: rgba(0,245,255,0.4); }
+
+    .row-idx { font-size: 11px; color: var(--grey2); font-weight: 300; }
+
+    /* Toast */
+    #toast {
+      position: fixed; bottom: 32px; right: 32px;
+      padding: 12px 20px; border-radius: 8px;
+      font-size: 13px; font-weight: 400;
+      opacity: 0; transition: opacity 0.3s ease;
+      pointer-events: none; z-index: 999;
+    }
+    #toast.show { opacity: 1; }
+    #toast.success { background: rgba(0,230,118,0.15); border: 1px solid rgba(0,230,118,0.3); color: var(--green); }
+    #toast.error   { background: rgba(255,68,68,0.12);  border: 1px solid rgba(255,68,68,0.3);  color: var(--red); }
+
+    .section-panel { display: none; }
+    .section-panel.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <div class="sidebar-header">
+      <h1>Site Admin</h1>
+      <p>メインページ管理</p>
+    </div>
+    <div class="nav-links">
+      <div class="nav-item active" data-panel="hero"    onclick="switchPanel('hero')">   <span class="nav-item-dot"></span> Hero</div>
+      <div class="nav-item"        data-panel="about"   onclick="switchPanel('about')">  <span class="nav-item-dot"></span> About</div>
+      <div class="nav-item"        data-panel="works"   onclick="switchPanel('works')">  <span class="nav-item-dot"></span> Works</div>
+      <div class="nav-item"        data-panel="contact" onclick="switchPanel('contact')"><span class="nav-item-dot"></span> Contact</div>
+    </div>
+    <div class="sidebar-links">
+      <a href="works/admin.html" class="sidebar-link">→ Works Detail Admin</a>
+      <a href="index.html" class="sidebar-link" target="_blank">→ サイトをプレビュー</a>
+    </div>
+  </aside>
+
+  <main>
+    <div class="top-bar">
+      <div class="top-bar-title" id="top-title">Editing: <span id="top-section">Hero</span></div>
+      <div class="top-actions">
+        <span class="save-status" id="save-status"></span>
+        <button class="btn-save" id="btn-save" onclick="saveData()">Save</button>
+      </div>
+    </div>
+
+    <div class="form-area">
+
+      <!-- Hero -->
+      <div class="section-panel active" id="panel-hero">
+        <div class="form-section">
+          <div class="form-section-title">Navigation</div>
+          <div class="form-grid">
+            <div class="field">
+              <label>Logo Text</label>
+              <input type="text" data-path="nav.logo">
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title">Hero Section</div>
+          <div class="form-grid">
+            <div class="field">
+              <label>Greeting</label>
+              <input type="text" data-path="hero.greeting">
+            </div>
+            <div class="field">
+              <label>Title / Role</label>
+              <input type="text" data-path="hero.title">
+            </div>
+          </div>
+          <div class="form-grid cols-1" style="margin-top:16px">
+            <div class="field">
+              <label>Name (\\n で改行)</label>
+              <input type="text" data-path="hero.name">
+            </div>
+          </div>
+          <div class="form-grid" style="margin-top:16px">
+            <div class="field">
+              <label>CTA ボタン（Primary）</label>
+              <input type="text" data-path="hero.ctaPrimary">
+            </div>
+            <div class="field">
+              <label>CTA ボタン（Secondary）</label>
+              <input type="text" data-path="hero.ctaSecondary">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="section-panel" id="panel-about">
+        <div class="form-section">
+          <div class="form-section-title">About Section</div>
+          <div class="form-grid cols-1">
+            <div class="field">
+              <label>Heading (\\n で改行、最終行が em タグ)</label>
+              <input type="text" data-path="about.heading">
+            </div>
+            <div class="field" style="margin-top:16px">
+              <label>Body Text</label>
+              <textarea data-path="about.body"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title">Stats</div>
+          <div class="row-group" id="stats-rows"></div>
+        </div>
+      </div>
+
+      <!-- Works -->
+      <div class="section-panel" id="panel-works">
+        <div class="form-section">
+          <div class="form-section-title">Works Section</div>
+          <div class="form-grid">
+            <div class="field">
+              <label>Heading (\\n で改行)</label>
+              <input type="text" data-path="works.heading">
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title">Work Cards</div>
+          <div class="row-group" id="cards-rows"></div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="section-panel" id="panel-contact">
+        <div class="form-section">
+          <div class="form-section-title">Contact Section</div>
+          <div class="form-grid cols-1">
+            <div class="field">
+              <label>Heading (\\n で改行)</label>
+              <input type="text" data-path="contact.heading">
+            </div>
+            <div class="field" style="margin-top:16px">
+              <label>Description</label>
+              <textarea data-path="contact.desc"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title">Links</div>
+          <div class="row-group" id="links-rows"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="toast"></div>
+
+  <script>
+    let siteData = {};
+
+    // ===== Load =====
+    async function loadData() {
+      const res = await fetch('/api/site');
+      siteData = await res.json();
+      renderAll();
+    }
+
+    // ===== Render =====
+    function renderAll() {
+      // Plain fields
+      document.querySelectorAll('[data-path]').forEach(el => {
+        const val = getPath(siteData, el.dataset.path) || '';
+        el.value = val;
+        el.addEventListener('input', () => markUnsaved());
+      });
+
+      // Stats
+      renderStats();
+      // Cards
+      renderCards();
+      // Links
+      renderLinks();
+    }
+
+    function renderStats() {
+      const stats = siteData.about?.stats || [];
+      document.getElementById('stats-rows').innerHTML = stats.map((s, i) => `
+        <div class="row-item stats-row">
+          <div>
+            <div class="row-label">Number</div>
+            <input type="text" data-stats-num="${i}" value="${esc(s.num)}" oninput="markUnsaved()">
+          </div>
+          <div>
+            <div class="row-label">Label</div>
+            <input type="text" data-stats-label="${i}" value="${esc(s.label)}" oninput="markUnsaved()">
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderCards() {
+      const cards = siteData.works?.cards || [];
+      document.getElementById('cards-rows').innerHTML = cards.map((c, i) => `
+        <div class="row-item" style="grid-template-columns:1fr; gap:12px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div>
+              <div class="row-label">Tag</div>
+              <input type="text" data-card-tag="${i}" value="${esc(c.tag)}" oninput="markUnsaved()">
+            </div>
+            <div>
+              <div class="row-label">Title</div>
+              <input type="text" data-card-title="${i}" value="${esc(c.title)}" oninput="markUnsaved()">
+            </div>
+          </div>
+          <div>
+            <div class="row-label">Description</div>
+            <textarea data-card-desc="${i}" oninput="markUnsaved()">${esc(c.desc)}</textarea>
+          </div>
+          <div>
+            <div class="row-label">Link (href)</div>
+            <input type="text" data-card-link="${i}" value="${esc(c.link)}" oninput="markUnsaved()">
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderLinks() {
+      const links = siteData.contact?.links || [];
+      document.getElementById('links-rows').innerHTML = links.map((l, i) => `
+        <div class="row-item links-row">
+          <div>
+            <div class="row-label">Icon</div>
+            <input type="text" data-link-icon="${i}" value="${esc(l.icon)}" oninput="markUnsaved()">
+          </div>
+          <div>
+            <div class="row-label">Label</div>
+            <input type="text" data-link-label="${i}" value="${esc(l.label)}" oninput="markUnsaved()">
+          </div>
+          <div>
+            <div class="row-label">URL</div>
+            <input type="text" data-link-href="${i}" value="${esc(l.href)}" oninput="markUnsaved()">
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ===== Collect =====
+    function collectData() {
+      const d = JSON.parse(JSON.stringify(siteData));
+
+      document.querySelectorAll('[data-path]').forEach(el => {
+        setPath(d, el.dataset.path, el.value);
+      });
+
+      // Stats
+      (d.about?.stats || []).forEach((s, i) => {
+        const n = document.querySelector(`[data-stats-num="${i}"]`);
+        const l = document.querySelector(`[data-stats-label="${i}"]`);
+        if (n) s.num   = n.value;
+        if (l) s.label = l.value;
+      });
+
+      // Cards
+      (d.works?.cards || []).forEach((c, i) => {
+        const tag  = document.querySelector(`[data-card-tag="${i}"]`);
+        const ttl  = document.querySelector(`[data-card-title="${i}"]`);
+        const desc = document.querySelector(`[data-card-desc="${i}"]`);
+        const lnk  = document.querySelector(`[data-card-link="${i}"]`);
+        if (tag)  c.tag   = tag.value;
+        if (ttl)  c.title = ttl.value;
+        if (desc) c.desc  = desc.value;
+        if (lnk)  c.link  = lnk.value;
+      });
+
+      // Links
+      (d.contact?.links || []).forEach((l, i) => {
+        const icon  = document.querySelector(`[data-link-icon="${i}"]`);
+        const label = document.querySelector(`[data-link-label="${i}"]`);
+        const href  = document.querySelector(`[data-link-href="${i}"]`);
+        if (icon)  l.icon  = icon.value;
+        if (label) l.label = label.value;
+        if (href)  l.href  = href.value;
+      });
+
+      return d;
+    }
+
+    // ===== Save =====
+    async function saveData() {
+      const btn    = document.getElementById('btn-save');
+      const status = document.getElementById('save-status');
+
+      siteData = collectData();
+      btn.disabled    = true;
+      btn.textContent = 'Saving...';
+      status.textContent = '';
+
+      try {
+        const res = await fetch('/api/site', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(siteData),
+        });
+        if (!res.ok) throw new Error('Server error');
+        const data = await res.json();
+
+        if (data.github?.ok) {
+          showToast(`保存 + GitHub push ✓  (${data.github.sha})`, 'success');
+        } else if (data.github?.error) {
+          showToast(`保存済み / GitHub: ${data.github.error}`, 'error');
+        } else {
+          showToast('保存しました ✓', 'success');
+        }
+
+        status.textContent = '保存済み';
+        status.className   = 'save-status saved';
+      } catch (e) {
+        showToast('保存に失敗しました', 'error');
+        status.textContent = 'エラー';
+        status.className   = 'save-status error';
+      } finally {
+        btn.disabled    = false;
+        btn.textContent = 'Save';
+      }
+    }
+
+    // ===== Panel switch =====
+    const PANEL_LABELS = { hero: 'Hero', about: 'About', works: 'Works', contact: 'Contact' };
+    function switchPanel(name) {
+      document.querySelectorAll('.section-panel').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      document.getElementById(`panel-${name}`).classList.add('active');
+      document.querySelector(`[data-panel="${name}"]`).classList.add('active');
+      document.getElementById('top-section').textContent = PANEL_LABELS[name];
+    }
+
+    // ===== Helpers =====
+    function markUnsaved() {
+      const s = document.getElementById('save-status');
+      s.textContent = '未保存'; s.className = 'save-status';
+    }
+
+    function getPath(obj, path) {
+      return path.split('.').reduce((o, k) => o?.[k], obj);
+    }
+    function setPath(obj, path, val) {
+      const keys = path.split('.');
+      keys.slice(0, -1).reduce((o, k) => o[k], obj)[keys.at(-1)] = val;
+    }
+
+    function esc(str) {
+      return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function showToast(msg, type = 'success') {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.className = `show ${type}`;
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => { t.className = type; }, 2500);
+    }
+
+    // ===== Keyboard shortcut =====
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+        e.preventDefault();
+        saveData();
+      }
+    });
+
+    loadData();
+  </script>
+</body>
+</html>
