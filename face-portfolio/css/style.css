@@ -383,6 +383,15 @@ section {
   margin-bottom: 56px;
 }
 
+.about-profile-p {
+  color: var(--grey-1);
+  line-height: 1.9;
+  font-size: 0.82rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.about-profile-p:last-child { margin-bottom: 48px; }
+
 .about-stats { display: flex; gap: 48px; }
 
 .stat { display: flex; flex-direction: column; gap: 6px; }
