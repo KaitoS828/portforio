@@ -11,7 +11,7 @@
   },
   "about": {
     "heading": "Crafting digital\nexperiences that\nresonate",
-    "body": "フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。3Dビジュアル・インタラクティブアート・AIを組み合わせた、誰も見たことのない体験を追求しています。",
+    "body": "フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。",
     "profile": [
       "神部凱斗（旧姓：関本凱斗）。1998年生まれ北海道札幌市出身。現在は、北海道の広尾町で地域おこし協力隊として活動。前職は住宅営業で、1年目に全国6位の営業成績。その圧倒的な行動力やビジネスセンスが現在の活動の土台になっている。",
       "協力隊としての業務では、地域通貨「サプリ」の運用やローカルLLMのRAGシステムを使用したLINEボットの構築、「広尾しごと」という地域求人サイトの運営・サイト構築（AIチャットボットも導入）などを行なっている。さらに、地方の中小企業のHP作成やDXにかかる相談対応なども行っている。"
@@ -25,24 +25,24 @@
   "works": {
     "heading": "Selected\nProjects",
     "cards": [
-      { "id": "the-board",      "tag": "AI × UX",          "title": "The Board",            "desc": "マルチエージェントAIが議論するリアルタイムボードルームシミュレーター。FastAPI + LangGraph + Gemini。",                                                                                                          "link": "works/the-board.html" },
-      { "id": "face-portfolio", "tag": "3D × Web",          "title": "Face Portfolio",       "desc": "Three.jsとGLBモデルを使ったインタラクティブな3Dポートフォリオ。このサイト自体。",                                                                                                                              "link": "works/face-portfolio.html" },
-      { "id": "knowledge-nexus","tag": "AI × Learning",     "title": "Knowledge Nexus",      "desc": "エンジニアのための「第2の脳」。URLやPDFをGemini AIが自動解析・要約し、クイズ生成・ナレッジグラフで学習を加速。Vite + React + Supabase + Firecrawl API。",                                                      "link": "https://github.com/KaitoS828/Knowledge-Nexus" },
-      { "id": "smart-checkin",  "tag": "Security × Next.js","title": "Smart Check-in",       "desc": "無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証 + Secret Codeの二段階認証でセキュアなチェックインを実現。Next.js 15 + TypeScript + Supabase + Vercel Cron。",                                      "link": "https://github.com/KaitoS828/smart_check_in" },
-      { "id": "id-photo",       "tag": "AI × Tool",         "title": "ID Photo Studio",      "desc": "Gemini AIを活用した証明写真作成Webアプリ。背景色変更・スーツ自動着用・パスポート等サイズプリセット対応。Next.js + Gemini Image AI。",                                                                           "link": "https://github.com/KaitoS828/id-photo" },
-      { "id": "sapuri-csv",     "tag": "AI × Business",     "title": "サプリCSVセンター",     "desc": "地域通貨「サプリ」向け入会申込書AI自動データ抽出ツール。PDFや画像をGemini AIが一括解析しCSV/Excelで出力。比較編集・和暦変換・バリデーション対応。Next.js + Gemini AI + Docker。",                             "link": "https://github.com/KaitoS828/sappuri_CSVcenter" },
-      { "id": "sapuri-linebot", "tag": "RAG × LINE",        "title": "サプリ LINE Bot",      "desc": "広尾町地域通貨「サプリ」加盟店向けLINE問い合わせAI返信Bot。ローカルLLM（Ollama）+ RAGシステムで個人情報を外部送信せず自動回答。Python + FastAPI + ChromaDB + Sentence Transformers。",                      "link": "https://github.com/KaitoS828/sapuri-line-bot" },
-      { "id": "ai-agent",       "tag": "Multi-Agent × AI",  "title": "AI Agent × Agent",     "desc": "CrewAIを活用したマルチエージェント協調システム。Researcher・Analyst・Writer・Criticが連携し、リサーチから執筆・品質監査まで自動化。Python + CrewAI + Gemini API + Serper API。",                              "link": "https://github.com/KaitoS828/AIAgentToAgent_test" },
-      { "id": "freemarket",     "tag": "Full Stack",        "title": "Coachtech Freemarket", "desc": "PHP/Laravelで構築したフリーマーケットプラットフォーム。Stripe決済・取引チャット・相互評価・メール通知を実装。Laravel 8 + MySQL + Nginx + Docker。",                                                          "link": "works/freemarket.html" },
-      { "id": "remotion",       "tag": "Motion × React",    "title": "Remotion Video",       "desc": "Reactで動画を生成するモーショングラフィックスエンジン。コードで映像を作る次世代アプローチ。",                                                                                                                      "link": "works/remotion.html" },
-      { "id": "contact-form",   "tag": "Full Stack",        "title": "お問い合わせフォーム",   "desc": "Laravelで構築した多機能お問い合わせフォーム。ユーザー登録・ログイン・管理者向け検索・管理機能を実装。PHP 8.1 + Laravel 8.75 + MySQL + Docker。",                                                                  "link": "https://github.com/KaitoS828/Confirmation-test" }
+      { "id": "the-board",      "tag": "AI × UX",           "title": "The Board",            "desc": "マルチエージェントAIが議論するリアルタイムボードルームシミュレーター。FastAPI + LangGraph + Gemini。",                                                                                                         "link": "works/the-board.html" },
+      { "id": "face-portfolio", "tag": "3D × Web",           "title": "Face Portfolio",       "desc": "Three.jsとGLBモデルを使ったインタラクティブな3Dポートフォリオ。このサイト自体。",                                                                                                                             "link": "works/face-portfolio.html" },
+      { "id": "knowledge-nexus","tag": "AI × Learning",      "title": "Knowledge Nexus",      "desc": "エンジニアのための「第2の脳」。URLやPDFをGemini AIが自動解析・要約し、クイズ生成・ナレッジグラフで学習を加速。Vite + React + Supabase + Firecrawl API。",                                                     "link": "works/knowledge-nexus.html" },
+      { "id": "smart-checkin",  "tag": "Security × Next.js", "title": "Smart Check-in",       "desc": "無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証 + Secret Codeの二段階認証でセキュアなチェックインを実現。Next.js 15 + TypeScript + Supabase + Vercel Cron。",                                     "link": "works/smart-checkin.html" },
+      { "id": "id-photo",       "tag": "AI × Tool",          "title": "ID Photo Studio",      "desc": "Gemini AIを活用した証明写真作成Webアプリ。背景色変更・スーツ自動着用・パスポート等サイズプリセット対応。Next.js + Gemini Image AI。",                                                                          "link": "works/id-photo.html" },
+      { "id": "sapuri-csv",     "tag": "AI × Business",      "title": "サプリCSVセンター",     "desc": "地域通貨「サプリ」向け入会申込書AI自動データ抽出ツール。PDFや画像をGemini AIが一括解析しCSV/Excelで出力。比較編集・和暦変換・バリデーション対応。Next.js + Gemini AI + Docker。",                            "link": "works/sapuri-csv.html" },
+      { "id": "sapuri-linebot", "tag": "RAG × LINE",         "title": "サプリ LINE Bot",      "desc": "広尾町地域通貨「サプリ」加盟店向けLINE問い合わせAI返信Bot。ローカルLLM（Ollama）+ RAGシステムで個人情報を外部送信せず自動回答。Python + FastAPI + ChromaDB + Sentence Transformers。",                     "link": "works/sapuri-linebot.html" },
+      { "id": "ai-agent",       "tag": "Multi-Agent × AI",   "title": "AI Agent × Agent",     "desc": "CrewAIを活用したマルチエージェント協調システム。Researcher・Analyst・Writer・Criticが連携し、リサーチから執筆・品質監査まで自動化。Python + CrewAI + Gemini API + Serper API。",                             "link": "works/ai-agent.html" },
+      { "id": "freemarket",     "tag": "Full Stack",         "title": "Coachtech Freemarket", "desc": "PHP/Laravelで構築したフリーマーケットプラットフォーム。Stripe決済・取引チャット・相互評価・メール通知を実装。Laravel 8 + MySQL + Nginx + Docker。",                                                         "link": "works/freemarket.html" },
+      { "id": "remotion",       "tag": "Motion × React",     "title": "Remotion Video",       "desc": "Reactで動画を生成するモーショングラフィックスエンジン。コードで映像を作る次世代アプローチ。",                                                                                                                     "link": "works/remotion.html" },
+      { "id": "contact-form",   "tag": "Full Stack",         "title": "お問い合わせフォーム",   "desc": "Laravelで構築した多機能お問い合わせフォーム。ユーザー登録・ログイン・管理者向け検索・管理機能を実装。PHP 8.1 + Laravel 8.75 + MySQL + Docker。",                                                                 "link": "works/contact-form.html" }
     ]
   },
   "contact": {
     "heading": "Let's Create\nSomething\nTogether",
     "desc": "新しいプロジェクト・コラボレーション・お仕事のご依頼はお気軽にどうぞ。",
     "links": [
-      { "label": "Email",   "icon": "✉", "href": "mailto:hello@example.com" },
+      { "label": "Email",   "icon": "✉", "href": "mailto:kaito.sekimoto8@gmail.com" },
       { "label": "GitHub",  "icon": "⌘", "href": "https://github.com/KaitoS828" },
       { "label": "Twitter", "icon": "◈", "href": "https://twitter.com" }
     ]

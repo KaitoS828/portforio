@@ -532,6 +532,11 @@ section {
 
 .contact-icon { font-size: 1.2rem; }
 
+.contact-form-cta {
+  margin-top: 48px;
+  text-align: center;
+}
+
 .contact-link span:last-child {
   font-size: 0.6rem;
   font-weight: 200;

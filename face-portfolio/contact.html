@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Kanbe Kaito</title>
+  <meta name="description" content="神部凱斗へのお問い合わせはこちら。お仕事のご依頼・コラボレーション・ご質問など、お気軽にどうぞ。">
+  <meta name="author" content="Kanbe Kaito">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.kaito-kanbe.com/contact.html">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#00f5ff">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.kaito-kanbe.com/contact.html">
+  <meta property="og:title"       content="Contact — Kanbe Kaito">
+  <meta property="og:description" content="神部凱斗へのお問い合わせはこちら。お仕事のご依頼・コラボレーション・ご質問など、お気軽にどうぞ。">
+  <meta property="og:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="works/style.css">
+  <style>
+    :root {
+      --white: #f0f0f0;
+      --grey-1: #a0a0a0;
+      --grey-2: #606060;
+      --border: rgba(255,255,255,0.08);
+      --cyan: #00f5ff;
+      --bg: #05000f;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; min-height: 100vh; }
+
+    .contact-page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 120px 6vw 100px;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 32px;
+      left: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--grey-1);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      z-index: 100;
+    }
+    .back-btn:hover { color: var(--white); }
+
+    .contact-page .section-label {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey-2);
+      margin-bottom: 20px;
+    }
+
+    .contact-page h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-page h1 em {
+      font-style: italic;
+      color: var(--grey-1);
+    }
+
+    .contact-page .subtitle {
+      color: var(--grey-1);
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.9;
+      margin-bottom: 56px;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 24px; }
+
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+
+    .form-group label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-2);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s ease;
+      border-radius: 0;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--cyan);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 160px;
+      line-height: 1.7;
+    }
+
+    .form-group select option {
+      background: #1a0030;
+      color: var(--white);
+    }
+
+    .form-submit {
+      margin-top: 8px;
+    }
+
+    .btn-submit {
+      display: inline-block;
+      padding: 16px 48px;
+      background: var(--white);
+      color: #05000f;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      font-family: inherit;
+      width: 100%;
+    }
+    .btn-submit:hover { opacity: 0.85; transform: translateY(-1px); }
+    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--grey-2);
+      margin-top: 16px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 0;
+    }
+    .form-success h2 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+    .form-success p {
+      color: var(--grey-1);
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+    .form-success a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .form-success a:hover { text-decoration: underline; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 56px 0; }
+
+    .direct-contact h3 {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey-2);
+      margin-bottom: 20px;
+    }
+    .direct-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .direct-link {
+      color: var(--grey-1);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+    .direct-link:hover { color: var(--white); }
+
+    @media (max-width: 768px) {
+      .back-btn { top: 20px; left: 20px; }
+      .contact-page { padding: 100px 6vw 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+
+  <a href="index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back
+  </a>
+
+  <div class="contact-page">
+    <span class="section-label">Contact</span>
+    <h1>Let's Create<br><em>Something Together</em></h1>
+    <p class="subtitle">新しいプロジェクト・コラボレーション・お仕事のご依頼など、<br>お気軽にご連絡ください。通常1〜2営業日以内にご返信します。</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="name">お名前 *</label>
+        <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス *</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">お問い合わせ種別</label>
+        <select id="category" name="category">
+          <option value="">選択してください</option>
+          <option value="work">お仕事のご依頼</option>
+          <option value="collaboration">コラボレーション</option>
+          <option value="dx">DX・システム相談</option>
+          <option value="lp">HP・LP制作</option>
+          <option value="other">その他</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">メッセージ *</label>
+        <textarea id="message" name="message" placeholder="お気軽にご記入ください。" required></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn-submit" id="submitBtn">送信する</button>
+      </div>
+      <p class="form-note">送信後、kaito.sekimoto8@gmail.com より返信いたします。</p>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <h2>送信しました。</h2>
+      <p>お問い合わせありがとうございます。<br>1〜2営業日以内にご返信いたします。</p>
+      <a href="index.html">← ポートフォリオに戻る</a>
+    </div>
+
+    <hr class="divider">
+
+    <div class="direct-contact">
+      <h3>Direct Contact</h3>
+      <div class="direct-links">
+        <a href="mailto:kaito.sekimoto8@gmail.com" class="direct-link">
+          <span>✉</span> kaito.sekimoto8@gmail.com
+        </a>
+        <a href="https://github.com/KaitoS828" target="_blank" class="direct-link">
+          <span>⌘</span> GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cursor
+    const cursorEl = document.querySelector('.cursor');
+    const trailEl  = document.querySelector('.cursor-trail');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+      if (cursorEl) { cursorEl.style.left = mx + 'px'; cursorEl.style.top = my + 'px'; }
+    });
+    (function loop() {
+      tx += (mx - tx) * 0.12; ty += (my - ty) * 0.12;
+      if (trailEl) { trailEl.style.left = tx + 'px'; trailEl.style.top = ty + 'px'; }
+      requestAnimationFrame(loop);
+    })();
+
+    // Form: Formspree送信
+    const form = document.getElementById('contactForm');
+    const successEl = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = '送信中...';
+
+      const data = {
+        name:     form.name.value,
+        email:    form.email.value,
+        category: form.category.value,
+        message:  form.message.value,
+      };
+
+      // Formspree endpoint (要設定: https://formspree.io/f/YOUR_ID)
+      const ENDPOINT = 'https://formspree.io/f/xpwzddqg';
+
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          successEl.style.display = 'block';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        alert('送信に失敗しました。直接メール（kaito.sekimoto8@gmail.com）よりご連絡ください。');
+        submitBtn.disabled = false;
+        submitBtn.textContent = '送信する';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -54,7 +54,7 @@ if (workId) {
 
 function injectWork(w) {
   // Title
-  document.title = `${w.title} — Sekimoto Kaito`;
+  document.title = `${w.title} — Kanbe Kaito`;
 
   // Hero
   set('.js-tag',   w.tag);
