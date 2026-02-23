@@ -543,7 +543,7 @@ section {
   #nav { padding: 20px 24px; }
   .nav-links { gap: 24px; }
   #hero, #about, #works, #contact { padding-left: 6vw; padding-right: 6vw; }
-  .about-inner { margin-left: 0; }
+  .about-inner { margin: 0 auto; }
   .works-grid { grid-template-columns: 1fr; }
   .work-card { border-right: none; border-bottom: 1px solid var(--border); }
   .contact-links { flex-direction: column; }
