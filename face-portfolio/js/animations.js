@@ -79,7 +79,7 @@ export function initAnimations(faceGroup, setModelIndex) {
       // Works — Typing
       setModelIndex?.(2);
       const t = Math.min((scrollY - (worksTop - wh * 0.5)) / wh, 1);
-      posTarget.x      = -2.2 + 4.0 * t;
+      posTarget.x      = window.innerWidth <= 768 ? 0 : -2.2 + 4.0 * t;
       posTarget.z      = 0;
       state.scrollScale = 0.9 - 0.3 * t;
     } else {
