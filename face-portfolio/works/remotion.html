@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Board — Sekimoto Kaito</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .feature-list li { display:flex; gap:14px; align-items:flex-start; font-size:15px; font-weight:300; line-height:1.7; color:var(--grey-1); margin-bottom:16px; }
+    .feat-dash { color:var(--cyan); flex-shrink:0; }
+  </style>
+</head>
+<body data-work-id="remotion">
+
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+
+  <a href="../index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back
+  </a>
+
+  <section class="work-hero">
+    <div class="work-tag js-tag"></div>
+    <h1 class="js-title"></h1>
+    <div class="work-hero-meta">
+      <div class="work-hero-meta-item">
+        <span class="label">Role</span>
+        <span class="value js-role"></span>
+      </div>
+      <div class="work-hero-meta-item">
+        <span class="label">Year</span>
+        <span class="value js-year"></span>
+      </div>
+      <div class="work-hero-meta-item">
+        <span class="label">Type</span>
+        <span class="value js-type"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-line"></div>
+
+  <div style="padding: 80px 10vw;">
+    <div class="mock-screen fade-in">
+      <div class="mock-screen-bar">
+        <div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div>
+        <span class="mock-url js-mock-url"></span>
+      </div>
+      <div class="mock-content js-mock-label"></div>
+    </div>
+  </div>
+
+  <section class="work-content fade-in">
+    <span class="section-label">Overview</span>
+    <h2 class="js-overview-heading"></h2>
+    <p class="js-overview-body"></p>
+  </section>
+
+  <div class="two-col fade-in">
+    <div>
+      <span class="section-label js-left-label"></span>
+      <ul class="feature-list js-left-items"></ul>
+    </div>
+    <div>
+      <span class="section-label js-right-label"></span>
+      <ul class="feature-list js-right-items"></ul>
+    </div>
+  </div>
+
+  <div class="tech-stack fade-in">
+    <div class="tech-stack-inner">
+      <span class="section-label">Tech Stack</span>
+      <div class="tech-list js-tech-list"></div>
+    </div>
+  </div>
+
+  <div class="work-cta fade-in">
+    <h2 class="js-cta-heading"></h2>
+    <div class="cta-links">
+      <a href="#" class="btn-primary js-cta-live">View Live</a>
+      <a href="#" class="btn-outline js-cta-github" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <nav class="work-nav-footer">
+    <a href="#" class="js-nav-prev" style="visibility:hidden">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="js-prev-label"></span>
+    </a>
+    <a href="#" class="js-nav-next" style="visibility:hidden">
+      <span class="js-next-label"></span>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </nav>
+
+  <script src="works.js" type="module"></script>
+</body>
+</html>

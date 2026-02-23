@@ -1,0 +1,10 @@
+node_modules/
+config.json
+
+# 元の大容量モデルファイル（draco圧縮版のみコミット）
+assets/model.glb
+assets/model.fbx
+assets/face.glb
+assets/house-dancing.glb
+assets/typing.glb
+assets/running-jump.glb

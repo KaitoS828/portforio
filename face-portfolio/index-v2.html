@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Portfolio — Split</title>
+  <link rel="stylesheet" href="css/style-v2.css">
+</head>
+<body>
+
+  <!-- Full-screen 3D canvas -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Left UI layer (logo, vertical label, hint) -->
+  <div id="left-ui">
+    <div class="logo-mark">F·P</div>
+    <div class="vertical-label">
+      <span>Sekimoto Kaito</span>
+      <span class="vl-dot">·</span>
+      <span>Creative Developer</span>
+      <span class="vl-dot">·</span>
+      <span>2026</span>
+    </div>
+    <div class="left-bottom">
+      <div id="drag-hint">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M12 5v14M5 12h14" stroke-linecap="round"/>
+        </svg>
+        <span>Drag · Scroll</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Center divider -->
+  <div id="divider">
+    <div id="divider-progress">
+      <div id="divider-fill"></div>
+    </div>
+  </div>
+
+  <!-- Right content panel -->
+  <div id="right-panel">
+
+    <!-- Navigation -->
+    <nav id="panel-nav">
+      <button class="nav-btn active" data-panel="0">
+        <span class="nav-num">01</span>
+        <span class="nav-label">Home</span>
+      </button>
+      <button class="nav-btn" data-panel="1">
+        <span class="nav-num">02</span>
+        <span class="nav-label">About</span>
+      </button>
+      <button class="nav-btn" data-panel="2">
+        <span class="nav-num">03</span>
+        <span class="nav-label">Works</span>
+      </button>
+      <button class="nav-btn" data-panel="3">
+        <span class="nav-num">04</span>
+        <span class="nav-label">Contact</span>
+      </button>
+    </nav>
+
+    <!-- Panel 01 — Home -->
+    <div class="panel active" id="p-0">
+      <div class="panel-num-bg" aria-hidden="true">01</div>
+      <div class="panel-content">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="display-name">Sekimoto<br>Kaito.</h1>
+        <p class="subtitle">Creative Developer<br>&amp; Designer</p>
+        <div class="panel-actions">
+          <button class="btn-primary js-goto" data-panel="2">View Works</button>
+          <button class="btn-outline js-goto" data-panel="3">Contact</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 02 — About -->
+    <div class="panel" id="p-1">
+      <div class="panel-num-bg" aria-hidden="true">02</div>
+      <div class="panel-content">
+        <p class="eyebrow">About</p>
+        <h2 class="display-heading">Crafting<br><em>digital</em><br>experiences.</h2>
+        <p class="body-text">フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。3Dビジュアル・AI・インタラクティブアートを組み合わせた没入体験を追求しています。</p>
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-n">3+</span>
+            <span class="stat-l">Years Exp.</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-n">20+</span>
+            <span class="stat-l">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-n">∞</span>
+            <span class="stat-l">Curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 03 — Works -->
+    <div class="panel" id="p-2">
+      <div class="panel-num-bg" aria-hidden="true">03</div>
+      <div class="panel-content">
+        <p class="eyebrow">Works</p>
+        <h2 class="display-heading">Selected<br>Projects.</h2>
+        <ul class="works-list">
+          <li class="work-item" onclick="location.href='works/the-board.html'" style="cursor:pointer">
+            <span class="work-idx">01</span>
+            <span class="work-name">The Board</span>
+            <span class="work-rule"></span>
+            <span class="work-tag">AI × UX</span>
+          </li>
+          <li class="work-item" onclick="location.href='works/face-portfolio.html'" style="cursor:pointer">
+            <span class="work-idx">02</span>
+            <span class="work-name">Face Portfolio</span>
+            <span class="work-rule"></span>
+            <span class="work-tag">3D × Web</span>
+          </li>
+          <li class="work-item" onclick="location.href='works/remotion.html'" style="cursor:pointer">
+            <span class="work-idx">03</span>
+            <span class="work-name">Remotion Video</span>
+            <span class="work-rule"></span>
+            <span class="work-tag">Motion</span>
+          </li>
+          <li class="work-item" onclick="location.href='works/freemarket.html'" style="cursor:pointer">
+            <span class="work-idx">04</span>
+            <span class="work-name">Freemarket App</span>
+            <span class="work-rule"></span>
+            <span class="work-tag">Full Stack</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Panel 04 — Contact -->
+    <div class="panel" id="p-3">
+      <div class="panel-num-bg" aria-hidden="true">04</div>
+      <div class="panel-content">
+        <p class="eyebrow">Contact</p>
+        <h2 class="display-heading">Let's<br><em>talk.</em></h2>
+        <p class="body-text">新しいプロジェクト・コラボレーション・<br>お仕事のご依頼はお気軽にどうぞ。</p>
+        <div class="contact-list">
+          <a href="mailto:hello@example.com" class="contact-row">
+            <span class="contact-type">Email</span>
+            <span class="contact-val">hello@example.com</span>
+          </a>
+          <a href="https://github.com" class="contact-row" target="_blank" rel="noopener">
+            <span class="contact-type">GitHub</span>
+            <span class="contact-val">@sekimoto-kaito</span>
+          </a>
+          <a href="https://twitter.com" class="contact-row" target="_blank" rel="noopener">
+            <span class="contact-type">Twitter</span>
+            <span class="contact-val">@sekimoto_kaito</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom progress bar -->
+    <div id="panel-progress">
+      <div id="progress-fill"></div>
+    </div>
+
+  </div>
+
+  <!-- Zoom indicator -->
+  <div id="zoom-hint">
+    <div class="zoom-bar-bg">
+      <div class="zoom-bar-fill" id="zoom-fill" style="height:50%"></div>
+    </div>
+    <span class="zoom-label">Zoom</span>
+  </div>
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="loading-inner">
+      <div class="loading-ring"></div>
+      <p>Loading</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main-v2.js"></script>
+</body>
+</html>

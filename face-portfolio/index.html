@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fixed 3D Canvas -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-logo">FP</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Sekimoto<br>Kaito</h1>
+      <p class="hero-title">Creative Developer &amp; Designer</p>
+      <div class="hero-cta">
+        <a href="#works" class="btn-primary">View Works</a>
+        <a href="#contact" class="btn-secondary">Contact</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <span class="section-label">About</span>
+        <h2>Crafting digital<br>experiences that<br><em>resonate</em></h2>
+        <p>フロントエンドからバックエンドまで、ユーザー体験を中心に据えたプロダクトを作り続けています。3Dビジュアル・インタラクティブアート・AIを組み合わせた、誰も見たことのない体験を追求しています。</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Section -->
+  <section id="works">
+    <div class="works-inner">
+      <span class="section-label">Works</span>
+      <h2>Selected<br>Projects</h2>
+      <div class="works-grid">
+        <div class="work-card" data-index="0" onclick="location.href='works/the-board.html'" style="cursor:pointer">
+          <div class="work-card-inner">
+            <div class="work-tag">AI × UX</div>
+            <h3>The Board</h3>
+            <p>マルチエージェントAIが議論するリアルタイムボードルームシミュレーター。FastAPI + LangGraph + Gemini。</p>
+            <div class="work-link">View Project →</div>
+          </div>
+        </div>
+        <div class="work-card" data-index="1" onclick="location.href='works/face-portfolio.html'" style="cursor:pointer">
+          <div class="work-card-inner">
+            <div class="work-tag">3D × Web</div>
+            <h3>Face Portfolio</h3>
+            <p>Three.jsとGLBモデルを使ったインタラクティブな3Dポートフォリオ。このサイト自体。</p>
+            <div class="work-link">View Detail →</div>
+          </div>
+        </div>
+        <div class="work-card" data-index="2" onclick="location.href='works/remotion.html'" style="cursor:pointer">
+          <div class="work-card-inner">
+            <div class="work-tag">Motion × React</div>
+            <h3>Remotion Video</h3>
+            <p>Reactで動画を生成するモーショングラフィックスエンジン。コードで映像を作る次世代アプローチ。</p>
+            <div class="work-link">View Project →</div>
+          </div>
+        </div>
+        <div class="work-card" data-index="3" onclick="location.href='works/freemarket.html'" style="cursor:pointer">
+          <div class="work-card-inner">
+            <div class="work-tag">Full Stack</div>
+            <h3>Freemarket App</h3>
+            <p>Ruby on Railsで構築したフリーマーケットプラットフォーム。決済・認証・画像管理を実装。</p>
+            <div class="work-link">View Project →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-inner">
+      <span class="section-label">Contact</span>
+      <h2>Let's Create<br>Something<br><em>Together</em></h2>
+      <p class="contact-desc">新しいプロジェクト・コラボレーション・お仕事のご依頼はお気軽にどうぞ。</p>
+      <div class="contact-links">
+        <a href="mailto:hello@example.com" class="contact-link">
+          <span class="contact-icon">✉</span>
+          <span>Email</span>
+        </a>
+        <a href="https://github.com" target="_blank" class="contact-link">
+          <span class="contact-icon">⌘</span>
+          <span>GitHub</span>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="contact-link">
+          <span class="contact-icon">◈</span>
+          <span>Twitter</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drag Hint -->
+  <div id="drag-hint">
+    <div class="drag-hint-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#00f5ff" stroke-width="1.5">
+        <path d="M9 3L9 12M9 3L6 6M9 3L12 6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 21L15 12M15 21L18 18M15 21L12 18" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 9L12 9M3 9L6 6M3 9L6 12" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 15L12 15M21 15L18 12M21 15L18 18" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <span class="drag-hint-text">Drag to rotate · Scroll to zoom</span>
+  </div>
+
+  <!-- Zoom indicator -->
+  <div id="zoom-hint">
+    <div class="zoom-bar-bg">
+      <div class="zoom-bar-fill" id="zoom-fill" style="height: 50%"></div>
+    </div>
+    <span class="zoom-label">Zoom</span>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loading-inner">
+      <div class="loading-ring"></div>
+      <p>Loading 3D Model...</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
