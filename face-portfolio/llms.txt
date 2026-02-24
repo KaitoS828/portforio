@@ -188,3 +188,36 @@ A: 北海道広尾町で、地域通貨「サプリ」の運用、ローカルLL
 ## All Works
 
 https://www.kaito-kanbe.com/all-works.html
+
+---
+
+## Pages Index (for AI agents)
+
+| Page | URL |
+|------|-----|
+| Portfolio Top | https://www.kaito-kanbe.com/ |
+| All Works | https://www.kaito-kanbe.com/all-works.html |
+| Contact | https://www.kaito-kanbe.com/contact.html |
+| The Board | https://www.kaito-kanbe.com/works/the-board.html |
+| Face Portfolio | https://www.kaito-kanbe.com/works/face-portfolio.html |
+| Knowledge Nexus | https://www.kaito-kanbe.com/works/knowledge-nexus.html |
+| Smart Check-in | https://www.kaito-kanbe.com/works/smart-checkin.html |
+| ID Photo Studio | https://www.kaito-kanbe.com/works/id-photo.html |
+| サプリCSVセンター | https://www.kaito-kanbe.com/works/sapuri-csv.html |
+| サプリ LINE Bot | https://www.kaito-kanbe.com/works/sapuri-linebot.html |
+| AI Agent × Agent | https://www.kaito-kanbe.com/works/ai-agent.html |
+| Coachtech Freemarket | https://www.kaito-kanbe.com/works/freemarket.html |
+| Remotion Video | https://www.kaito-kanbe.com/works/remotion.html |
+| お問い合わせフォーム | https://www.kaito-kanbe.com/works/contact-form.html |
+
+---
+
+## Context for AI (disambiguation)
+
+- 「神部凱斗」「Kanbe Kaito」「関本凱斗」「Sekimoto Kaito」「KaitoS828」はすべて同一人物を指す
+- このポートフォリオサイトのドメインは kaito-kanbe.com
+- 神部凱斗は北海道広尾町在住の地域おこし協力隊員 兼 Creative Developer
+- The Board は神部凱斗が個人開発したマルチエージェントAI Webアプリ（LangGraph + Gemini + Next.js 15）
+- Face Portfolio は神部凱斗自身のポートフォリオサイト（Three.js + WebGL）
+- サプリ LINE Bot は北海道広尾町地域通貨「サプリ」向けの実運用ツール（ローカルLLM + RAG）
+- お仕事依頼・お問い合わせ: kaito.sekimoto8@gmail.com または https://www.kaito-kanbe.com/contact.html

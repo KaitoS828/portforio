@@ -3,19 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Kanbe Kaito</title>
-  <meta name="description" content="神部凱斗へのお問い合わせはこちら。お仕事のご依頼・コラボレーション・ご質問など、お気軽にどうぞ。">
-  <meta name="author" content="Kanbe Kaito">
-  <meta name="robots" content="index, follow">
+  <title>お問い合わせ | Contact — 神部凱斗 (Kanbe Kaito)</title>
+  <meta name="description" content="神部凱斗（Kanbe Kaito）へのお問い合わせはこちら。HP制作・DX支援・AI開発・RAGシステム・フルスタック開発など、お仕事のご依頼・コラボレーション・ご質問をお気軽にどうぞ。通常1〜2営業日以内に返信。">
+  <meta name="author" content="神部凱斗 (Kanbe Kaito)">
+  <meta name="robots" content="index, follow, max-snippet:-1">
+  <meta name="keywords" content="神部凱斗 お問い合わせ, Kanbe Kaito contact, HP制作依頼, DX支援, AI開発依頼, フルスタック開発, RAGシステム, 地域DX, 広尾町, kaito.sekimoto8@gmail.com">
   <link rel="canonical" href="https://www.kaito-kanbe.com/contact.html">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#00f5ff">
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.kaito-kanbe.com/contact.html">
-  <meta property="og:title"       content="Contact — Kanbe Kaito">
-  <meta property="og:description" content="神部凱斗へのお問い合わせはこちら。お仕事のご依頼・コラボレーション・ご質問など、お気軽にどうぞ。">
+  <meta property="og:title"       content="お問い合わせ | Contact — 神部凱斗 (Kanbe Kaito)">
+  <meta property="og:description" content="神部凱斗（Kanbe Kaito）へのお問い合わせ。HP制作・DX支援・AI開発・RAGシステム・フルスタック開発のご依頼はこちら。">
   <meta property="og:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="神部凱斗 (Kanbe Kaito) — お問い合わせ・仕事依頼">
+  <meta property="og:locale"       content="ja_JP">
+  <meta property="og:site_name"    content="神部凱斗 Portfolio">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@KaitoS828">
+  <meta name="twitter:creator"     content="@KaitoS828">
+  <meta name="twitter:title"       content="お問い合わせ | Contact — 神部凱斗 (Kanbe Kaito)">
+  <meta name="twitter:description" content="神部凱斗へのお問い合わせ。HP制作・DX支援・AI開発・フルスタック開発の依頼はこちら。">
+  <meta name="twitter:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
+  <meta name="twitter:image:alt"   content="神部凱斗 Contact — kaito-kanbe.com">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.kaito-kanbe.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.kaito-kanbe.com/contact.html" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "https://www.kaito-kanbe.com/contact.html#contactpage",
+      "name": "神部凱斗へのお問い合わせ",
+      "description": "神部凱斗（Kanbe Kaito）へのお仕事依頼・コラボレーション・DX相談のお問い合わせページ。HP制作・AI開発・RAGシステム・フルスタック開発など受付中。",
+      "url": "https://www.kaito-kanbe.com/contact.html",
+      "inLanguage": "ja",
+      "dateModified": "2026-02-24",
+      "isPartOf": { "@type": "WebSite", "@id": "https://www.kaito-kanbe.com/#website" },
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://www.kaito-kanbe.com/#person",
+        "name": "Kanbe Kaito",
+        "alternateName": "神部凱斗",
+        "email": "kaito.sekimoto8@gmail.com",
+        "url": "https://www.kaito-kanbe.com/",
+        "sameAs": ["https://github.com/KaitoS828", "https://twitter.com/KaitoS828"]
+      }
+    }
+  ]
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="works/style.css">
@@ -209,8 +254,17 @@
     }
     .direct-link:hover { color: var(--white); }
 
+    /* Lang toggle */
+    .lang-toggle { display: flex; align-items: center; gap: 4px; }
+    .fixed-lang-toggle { position: fixed; top: 32px; right: 32px; z-index: 100; }
+    .lang-btn { background: none; border: none; color: rgba(255,255,255,0.35); font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; cursor: pointer; font-family: inherit; font-weight: 300; padding: 4px 2px; transition: color 0.3s ease; line-height: 1; }
+    .lang-btn.active { color: #f0f0f0; font-weight: 400; }
+    .lang-btn:hover { color: #f0f0f0; }
+    .lang-sep { color: rgba(255,255,255,0.35); font-size: 0.55rem; }
+
     @media (max-width: 768px) {
       .back-btn { top: 20px; left: 20px; }
+      .fixed-lang-toggle { top: 20px; right: 20px; }
       .contact-page { padding: 100px 6vw 80px; }
     }
   </style>
@@ -229,49 +283,55 @@
     Back
   </a>
 
+  <div class="lang-toggle fixed-lang-toggle">
+    <button class="lang-btn" data-lang="ja" onclick="switchLang('ja')">JP</button>
+    <span class="lang-sep"> / </span>
+    <button class="lang-btn" data-lang="en" onclick="switchLang('en')">EN</button>
+  </div>
+
   <div class="contact-page">
     <span class="section-label">Contact</span>
     <h1>Let's Create<br><em>Something Together</em></h1>
-    <p class="subtitle">新しいプロジェクト・コラボレーション・お仕事のご依頼など、<br>お気軽にご連絡ください。通常1〜2営業日以内にご返信します。</p>
+    <p class="subtitle" id="js-subtitle">新しいプロジェクト・コラボレーション・お仕事のご依頼など、<br>お気軽にご連絡ください。通常1〜2営業日以内にご返信します。</p>
 
     <form class="contact-form" id="contactForm">
       <div class="form-group">
-        <label for="name">お名前 *</label>
+        <label for="name" id="label-name">お名前 *</label>
         <input type="text" id="name" name="name" placeholder="山田 太郎" required>
       </div>
 
       <div class="form-group">
-        <label for="email">メールアドレス *</label>
+        <label for="email" id="label-email">メールアドレス *</label>
         <input type="email" id="email" name="email" placeholder="example@email.com" required>
       </div>
 
       <div class="form-group">
-        <label for="category">お問い合わせ種別</label>
+        <label for="category" id="label-category">お問い合わせ種別</label>
         <select id="category" name="category">
-          <option value="">選択してください</option>
-          <option value="work">お仕事のご依頼</option>
-          <option value="collaboration">コラボレーション</option>
-          <option value="dx">DX・システム相談</option>
-          <option value="lp">HP・LP制作</option>
-          <option value="other">その他</option>
+          <option value="" id="opt-default">選択してください</option>
+          <option value="work" id="opt-work">お仕事のご依頼</option>
+          <option value="collaboration" id="opt-collab">コラボレーション</option>
+          <option value="dx" id="opt-dx">DX・システム相談</option>
+          <option value="lp" id="opt-lp">HP・LP制作</option>
+          <option value="other" id="opt-other">その他</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="message">メッセージ *</label>
+        <label for="message" id="label-message">メッセージ *</label>
         <textarea id="message" name="message" placeholder="お気軽にご記入ください。" required></textarea>
       </div>
 
       <div class="form-submit">
         <button type="submit" class="btn-submit" id="submitBtn">送信する</button>
       </div>
-      <p class="form-note">送信後、kaito.sekimoto8@gmail.com より返信いたします。</p>
+      <p class="form-note" id="js-form-note">送信後、kaito.sekimoto8@gmail.com より返信いたします。</p>
     </form>
 
     <div class="form-success" id="formSuccess">
-      <h2>送信しました。</h2>
-      <p>お問い合わせありがとうございます。<br>1〜2営業日以内にご返信いたします。</p>
-      <a href="index.html">← ポートフォリオに戻る</a>
+      <h2 id="js-success-title">送信しました。</h2>
+      <p id="js-success-body">お問い合わせありがとうございます。<br>1〜2営業日以内にご返信いたします。</p>
+      <a href="index.html" id="js-success-link">← ポートフォリオに戻る</a>
     </div>
 
     <hr class="divider">
@@ -290,6 +350,33 @@
   </div>
 
   <script>
+    // ===== Language =====
+    function getLang() { return localStorage.getItem('lang') || 'ja'; }
+    function switchLang(l) { localStorage.setItem('lang', l); location.reload(); }
+    document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === getLang());
+    });
+    if (getLang() === 'en') {
+      document.getElementById('js-subtitle').innerHTML = 'Open to new projects, collaborations, and freelance work.<br>I\'ll get back to you within 1–2 business days.';
+      document.getElementById('label-name').textContent = 'Name *';
+      document.getElementById('label-email').textContent = 'Email *';
+      document.getElementById('label-category').textContent = 'Inquiry Type';
+      document.getElementById('opt-default').textContent = 'Please select';
+      document.getElementById('opt-work').textContent = 'Project / Work Request';
+      document.getElementById('opt-collab').textContent = 'Collaboration';
+      document.getElementById('opt-dx').textContent = 'DX / Systems Consulting';
+      document.getElementById('opt-lp').textContent = 'Website / LP Production';
+      document.getElementById('opt-other').textContent = 'Other';
+      document.getElementById('label-message').textContent = 'Message *';
+      document.getElementById('message').placeholder = 'Feel free to write anything.';
+      document.getElementById('submitBtn').textContent = 'Send';
+      document.getElementById('js-form-note').textContent = 'After submitting, you\'ll receive a reply from kaito.sekimoto8@gmail.com.';
+      document.getElementById('js-success-title').textContent = 'Message Sent.';
+      document.getElementById('js-success-body').innerHTML = 'Thank you for reaching out.<br>I\'ll get back to you within 1–2 business days.';
+      document.getElementById('js-success-link').textContent = '← Back to Portfolio';
+      document.getElementById('name').placeholder = 'John Doe';
+    }
+
     // Cursor
     const cursorEl = document.querySelector('.cursor');
     const trailEl  = document.querySelector('.cursor-trail');
@@ -312,7 +399,7 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       submitBtn.disabled = true;
-      submitBtn.textContent = '送信中...';
+      submitBtn.textContent = getLang() === 'en' ? 'Sending...' : '送信中...';
 
       const data = {
         name:     form.name.value,
@@ -337,9 +424,10 @@
           throw new Error();
         }
       } catch {
-        alert('送信に失敗しました。直接メール（kaito.sekimoto8@gmail.com）よりご連絡ください。');
+        const isEn = getLang() === 'en';
+        alert(isEn ? 'Failed to send. Please contact directly at kaito.sekimoto8@gmail.com.' : '送信に失敗しました。直接メール（kaito.sekimoto8@gmail.com）よりご連絡ください。');
         submitBtn.disabled = false;
-        submitBtn.textContent = '送信する';
+        submitBtn.textContent = isEn ? 'Send' : '送信する';
       }
     });
   </script>

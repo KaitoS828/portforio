@@ -200,6 +200,30 @@ body {
   color: var(--white);
 }
 
+/* ===== Language Toggle ===== */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--grey-2);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: none;
+  font-family: var(--sans);
+  font-weight: 300;
+  padding: 4px 2px;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+.lang-btn.active { color: var(--white); font-weight: 400; }
+.lang-btn:hover  { color: var(--white); }
+.lang-sep { color: var(--grey-2); font-size: 0.55rem; }
+
 .nav-links {
   display: flex;
   gap: 48px;

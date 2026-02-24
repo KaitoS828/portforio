@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Kanbe\nKaito",
+    "title": "Creative Developer & Designer",
+    "ctaPrimary": "View Works",
+    "ctaSecondary": "Contact"
+  },
+  "about": {
+    "heading": "Crafting digital\nexperiences that\nresonate",
+    "body": "I keep building products centered on user experience, from frontend to backend.",
+    "profile": [
+      "Kaito Kanbe (formerly Kaito Sekimoto). Born in 1998 in Sapporo, Hokkaido. Currently working as a Community Development Coordinator in Hiroo, Hokkaido. In my previous role as a housing sales representative, I ranked 6th nationwide in my first year — a track record of bold action and business acumen that underpins everything I do today.",
+      "As a coordinator, I manage the local currency 'Sapuri', built a LINE chatbot using a local LLM + RAG system, operate and develop the local job site 'Hiroo Shigoto' (complete with an AI chatbot), and provide website creation and DX consulting for local small and medium-sized businesses."
+    ],
+    "stats": [
+      { "num": "3+", "label": "Years Exp." },
+      { "num": "20+", "label": "Projects" },
+      { "num": "∞", "label": "Curiosity" }
+    ]
+  },
+  "works": {
+    "heading": "Selected\nProjects",
+    "cards": [
+      { "id": "the-board",       "tag": "AI × UX",           "title": "The Board",            "desc": "A real-time boardroom simulator where multiple AI agents debate and make decisions. Built with FastAPI + LangGraph + Gemini.",                                                                                                  "link": "works/the-board.html" },
+      { "id": "face-portfolio",  "tag": "3D × Web",           "title": "Face Portfolio",       "desc": "An interactive 3D portfolio using Three.js and GLB models — the very site you're browsing.",                                                                                                                                  "link": "works/face-portfolio.html" },
+      { "id": "knowledge-nexus", "tag": "AI × Learning",      "title": "Knowledge Nexus",      "desc": "A 'second brain' for engineers. Gemini AI auto-analyzes URLs and PDFs, generates quizzes, and maps knowledge. Built with Vite + React + Supabase + Firecrawl API.",                                                           "link": "works/knowledge-nexus.html" },
+      { "id": "smart-checkin",   "tag": "Security × Next.js", "title": "Smart Check-in",       "desc": "A self check-in app for unstaffed accommodations. Two-factor auth with WebAuthn biometrics + Secret Code. Next.js 15 + TypeScript + Supabase + Vercel Cron.",                                                                 "link": "works/smart-checkin.html" },
+      { "id": "id-photo",        "tag": "AI × Tool",          "title": "ID Photo Studio",      "desc": "A web app for creating ID photos powered by Gemini AI. Background color change, auto suit addition, and preset sizes for passports and more. Next.js + Gemini Image AI.",                                                      "link": "works/id-photo.html" },
+      { "id": "sapuri-csv",      "tag": "AI × Business",      "title": "Sapuri CSV Center",    "desc": "An AI data-extraction tool for the local currency 'Sapuri' membership forms. Gemini AI batch-processes PDFs and images, outputting CSV/Excel. Next.js + Gemini AI + Docker.",                                                 "link": "works/sapuri-csv.html" },
+      { "id": "sapuri-linebot",  "tag": "RAG × LINE",         "title": "Sapuri LINE Bot",      "desc": "A LINE chatbot for merchants of Hiroo's local currency 'Sapuri'. Uses a local LLM (Ollama) + RAG to answer queries without sending personal data externally. Python + FastAPI + ChromaDB.",                                   "link": "works/sapuri-linebot.html" },
+      { "id": "ai-agent",        "tag": "Multi-Agent × AI",   "title": "AI Agent × Agent",     "desc": "A multi-agent collaboration system using CrewAI. Five agents — Researcher, Analyst, Writer, Critic, and PM — automate the full pipeline from research to publishing. Python + CrewAI + Gemini API.",                          "link": "works/ai-agent.html" },
+      { "id": "freemarket",      "tag": "Full Stack",         "title": "Coachtech Freemarket", "desc": "A flea market platform built with PHP/Laravel. Implements Stripe payments, trade chat, mutual reviews, and email notifications. Laravel 8 + MySQL + Nginx + Docker.",                                                         "link": "works/freemarket.html" },
+      { "id": "remotion",        "tag": "Motion × React",     "title": "Remotion Video",       "desc": "A motion graphics engine that generates videos with React — a next-gen approach to creating video through code.",                                                                                                              "link": "works/remotion.html" },
+      { "id": "contact-form",    "tag": "Full Stack",         "title": "Contact Form",         "desc": "A multi-functional contact form built with Laravel. User registration, login, admin search, and management features. PHP 8.1 + Laravel 8.75 + MySQL + Docker.",                                                               "link": "works/contact-form.html" }
+    ]
+  },
+  "contact": {
+    "heading": "Let's Create\nSomething\nTogether",
+    "desc": "Open to new projects, collaborations, and freelance work. I'll get back to you within 1–2 business days.",
+    "links": [
+      { "label": "Email",   "icon": "✉", "href": "mailto:kaito.sekimoto8@gmail.com" },
+      { "label": "GitHub",  "icon": "⌘", "href": "https://github.com/KaitoS828" },
+      { "label": "Twitter", "icon": "◈", "href": "https://twitter.com" }
+    ]
+  }
+}

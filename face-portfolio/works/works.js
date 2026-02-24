@@ -39,10 +39,28 @@ const fadeObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
 
+// ===== Language =====
+function getLang() { return localStorage.getItem('lang') || 'ja'; }
+function switchLang(l) { localStorage.setItem('lang', l); location.reload(); }
+window.switchLang = switchLang;
+
+// Inject lang toggle
+const langToggle = document.createElement('div');
+langToggle.className = 'lang-toggle fixed-lang-toggle';
+langToggle.innerHTML = `
+  <button class="lang-btn" data-lang="ja" onclick="switchLang('ja')">JP</button>
+  <span class="lang-sep"> / </span>
+  <button class="lang-btn" data-lang="en" onclick="switchLang('en')">EN</button>`;
+document.body.appendChild(langToggle);
+document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+  btn.classList.toggle('active', btn.dataset.lang === getLang());
+});
+
 // ===== Load & inject data from data.json =====
 const workId = document.body.dataset.workId;
 if (workId) {
-  fetch('/works/data.json')
+  const dataUrl = getLang() === 'en' ? '/works/data-en.json' : '/works/data.json';
+  fetch(dataUrl)
     .then(r => r.json())
     .then(data => {
       const w = data[workId];

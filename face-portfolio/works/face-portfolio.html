@@ -27,6 +27,12 @@
   <meta name="twitter:title"       content="Face Portfolio — Kanbe Kaito">
   <meta name="twitter:description" content="Three.js 3D モデルがスクロールに連動するインタラクティブポートフォリオ。">
   <meta name="twitter:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
+  <meta name="twitter:site"        content="@KaitoS828">
+  <meta name="twitter:image:alt"   content="Face Portfolio — 3D Interactive Portfolio by Kanbe Kaito">
+  <meta property="og:image:alt"    content="Face Portfolio — 3D Interactive Portfolio by 神部凱斗 (Kanbe Kaito)">
+  <meta property="og:locale"       content="ja_JP">
+  <meta property="og:site_name"    content="神部凱斗 Portfolio">
+  <meta name="keywords"            content="Face Portfolio, Three.js, WebGL, 3D, ポートフォリオ, インタラクティブ, スクロールアニメーション, GLB, Draco圧縮, GLSL, 神部凱斗, Kanbe Kaito">
   <script type="application/ld+json">
   [
     {
@@ -51,7 +57,10 @@
       "programmingLanguage": ["JavaScript", "Three.js", "CSS"],
       "url": "https://www.kaito-kanbe.com/works/face-portfolio.html",
       "operatingSystem": "Web Browser",
-      "dateCreated": "2025-01-01"
+      "dateCreated": "2025-01-01",
+      "dateModified": "2026-02-24",
+      "inLanguage": "ja",
+      "isPartOf": { "@type": "WebSite", "@id": "https://www.kaito-kanbe.com/#website" }
     }
   ]
   </script>
@@ -153,6 +162,35 @@
     </a>
   </nav>
 
+  <!-- SEO/LLMO: Static content for crawlers and LLMs -->
+  <noscript>
+  <article style="padding:40px;max-width:800px;margin:0 auto;font-family:sans-serif;color:#fff;background:#05000f">
+    <h1>Face Portfolio — 3Dキャラクターと共に魅せるポートフォリオ</h1>
+    <p><strong>作成者:</strong> 神部凱斗 (Kanbe Kaito) | <strong>Role:</strong> Frontend Engineer | <strong>Year:</strong> 2025 | <strong>Type:</strong> Personal Project</p>
+    <h2>概要</h2>
+    <p>Three.js を活用した3Dキャラクターアニメーションをメインビジュアルに据えたポートフォリオサイト。スクロールに連動してキャラクターが切り替わり、サイト全体でインタラクティブな体験を提供します。</p>
+    <h2>主な機能</h2>
+    <ul>
+      <li>セクション連動3Dモデル切り替え（4体）</li>
+      <li>Draco圧縮でモデルを最大86%軽量化</li>
+      <li>ホバー・クリックでエミッシブグロー演出</li>
+      <li>スクロール型・パネル型の2レイアウト</li>
+      <li>Works Admin（GitHub自動push対応）</li>
+    </ul>
+    <h2>技術ハイライト</h2>
+    <ul>
+      <li>GLTFLoader + DRACOLoader による効率的なモデルロード</li>
+      <li>UnrealBloomPass でシネマティックなブルーム効果</li>
+      <li>Raycasting によるメッシュ単位のインタラクション</li>
+      <li>IntersectionObserver でスクロール連動アニメーション</li>
+      <li>Express API + GitHub REST API でコンテンツ管理</li>
+    </ul>
+    <h2>技術スタック</h2>
+    <p>Three.js / GLSL / Express.js / GitHub API / Vanilla JS / CSS</p>
+    <p><a href="https://www.kaito-kanbe.com/">Live: kaito-kanbe.com</a> | <a href="https://github.com/KaitoS828/portforio">GitHub: github.com/KaitoS828/portforio</a></p>
+    <p><a href="https://www.kaito-kanbe.com/">作成者ポートフォリオ: kaito-kanbe.com</a></p>
+  </article>
+  </noscript>
   <script src="works.js" type="module"></script>
 </body>
 </html>

@@ -25,6 +25,12 @@
   <meta name="twitter:title"       content="サプリ LINE Bot — Kanbe Kaito">
   <meta name="twitter:description" content="広尾町地域通貨「サプリ」加盟店向けLINE問い合わせAI返信Bot。ローカルLLMとRAGシステムで個人情報を外部送信せずに自動回答。">
   <meta name="twitter:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
+  <meta name="twitter:site"        content="@KaitoS828">
+  <meta name="twitter:image:alt"   content="サプリ LINE Bot — RAG LINE Bot by Kanbe Kaito">
+  <meta property="og:image:alt"    content="サプリ LINE Bot — ローカルLLM RAG LINE Bot by 神部凱斗 (Kanbe Kaito)">
+  <meta property="og:locale"       content="ja_JP">
+  <meta property="og:site_name"    content="神部凱斗 Portfolio">
+  <meta name="keywords"            content="サプリ LINE Bot, RAG, Ollama, ローカルLLM, ChromaDB, LINE Bot, FastAPI, Python, 地域通貨, プライバシー保護, Sentence Transformers, 広尾町, 神部凱斗, Kanbe Kaito">
   <script type="application/ld+json">
   [
     {
@@ -49,7 +55,10 @@
       "programmingLanguage": ["Python", "FastAPI"],
       "url": "https://www.kaito-kanbe.com/works/sapuri-linebot.html",
       "operatingSystem": "Web Browser",
-      "dateCreated": "2025-01-01"
+      "dateCreated": "2025-01-01",
+      "dateModified": "2026-02-24",
+      "inLanguage": "ja",
+      "isPartOf": { "@type": "WebSite", "@id": "https://www.kaito-kanbe.com/#website" }
     }
   ]
   </script>
@@ -151,6 +160,35 @@
     </a>
   </nav>
 
+  <!-- SEO/LLMO: Static content for crawlers and LLMs -->
+  <noscript>
+  <article style="padding:40px;max-width:800px;margin:0 auto;font-family:sans-serif;color:#fff;background:#05000f">
+    <h1>サプリ LINE Bot — 地域通貨加盟店向けLINE AIサポートBot</h1>
+    <p><strong>作成者:</strong> 神部凱斗 (Kanbe Kaito) | <strong>Role:</strong> Backend Engineer | <strong>Year:</strong> 2025 | <strong>Type:</strong> Local Government Project | <strong>場所:</strong> 北海道広尾町</p>
+    <h2>概要</h2>
+    <p>北海道広尾町の地域通貨「サプリ」加盟店からの問い合わせに、AIが自動回答するLINE Bot。ローカルLLM（Ollama）とRAGシステムを組み合わせ、個人情報を外部サーバーに送信しない設計で安全性を担保しています。</p>
+    <h2>主な機能</h2>
+    <ul>
+      <li>RAGシステムでマニュアル・FAQから自動回答生成</li>
+      <li>ローカルLLM（Ollama gemma2:2b）で個人情報を外部送信しない</li>
+      <li>個人情報フィルターで安全性を二重確保</li>
+      <li>LINE Messaging APIで加盟店からリアルタイム問い合わせ対応</li>
+      <li>ベクトル検索で関連ドキュメントを高精度取得</li>
+    </ul>
+    <h2>技術ハイライト</h2>
+    <ul>
+      <li>ChromaDB によるベクトルデータベース管理</li>
+      <li>Sentence Transformers（multilingual-e5-small）でEmbedding</li>
+      <li>FastAPI でWebhookエンドポイント管理</li>
+      <li>Ollama（ローカルLLM）でプライバシー保護推論</li>
+      <li>Python 非同期処理でレスポンス速度最適化</li>
+    </ul>
+    <h2>技術スタック</h2>
+    <p>Python / FastAPI / Ollama / ChromaDB / Sentence Transformers / LINE Messaging API</p>
+    <p><a href="https://github.com/KaitoS828/sapuri-line-bot">GitHub: github.com/KaitoS828/sapuri-line-bot</a></p>
+    <p><a href="https://www.kaito-kanbe.com/">作成者ポートフォリオ: kaito-kanbe.com</a></p>
+  </article>
+  </noscript>
   <script src="works.js" type="module"></script>
 </body>
 </html>

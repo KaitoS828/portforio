@@ -222,7 +222,11 @@
 
   <!-- Navigation -->
   <nav id="nav">
-    <div class="nav-logo" id="js-nav-logo">FP</div>
+    <div class="nav-logo lang-toggle">
+      <button class="lang-btn" data-lang="ja" onclick="switchLang('ja')">JP</button>
+      <span class="lang-sep"> / </span>
+      <button class="lang-btn" data-lang="en" onclick="switchLang('en')">EN</button>
+    </div>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -349,14 +353,20 @@
   <script type="module" src="js/main.js"></script>
 
   <script>
-    fetch('/site-data.json')
+    // ===== Language =====
+    function getLang() { return localStorage.getItem('lang') || 'ja'; }
+    function switchLang(l) { localStorage.setItem('lang', l); location.reload(); }
+    window.switchLang = switchLang;
+    document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === getLang());
+    });
+
+    const dataUrl = getLang() === 'en' ? '/site-data-en.json' : '/site-data.json';
+    fetch(dataUrl)
       .then(r => r.json())
       .then(d => {
         const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
         const setHtml = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
-
-        // Nav
-        set('js-nav-logo', d.nav?.logo);
 
         // Hero
         set('js-hero-greeting', d.hero?.greeting);
