@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Works — Kanbe Kaito</title>
+  <meta name="description" content="神部凱斗のプロジェクト一覧。AI・3D・フルスタック・地域DXなど全作品を掲載。">
+  <meta name="author" content="Kanbe Kaito">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.kaito-kanbe.com/all-works.html">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#00f5ff">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.kaito-kanbe.com/all-works.html">
+  <meta property="og:title"       content="All Works — Kanbe Kaito">
+  <meta property="og:description" content="神部凱斗のプロジェクト一覧。AI・3D・フルスタック・地域DXなど全作品を掲載。">
+  <meta property="og:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="works/style.css">
+  <style>
+    body { background: var(--bg); }
+
+    .page-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 6vw 100px;
+    }
+
+    .page-header {
+      margin-bottom: 72px;
+    }
+
+    .page-header .section-label {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey-2);
+      margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .page-header .count {
+      font-size: 0.8rem;
+      color: var(--grey-2);
+      font-weight: 300;
+      letter-spacing: 0.1em;
+    }
+
+    .all-works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--border);
+      margin-bottom: 1px;
+    }
+
+    .all-work-card {
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+    }
+    .all-work-card.visible { opacity: 1; transform: translateY(0); }
+    .all-work-card:hover { background: rgba(255,255,255,0.03); }
+
+    .all-work-card-inner { padding: 36px 32px; }
+
+    .work-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--grey-2);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 20px;
+    }
+
+    .all-work-card h3 {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .all-work-card p {
+      color: var(--grey-1);
+      font-size: 0.82rem;
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .card-link {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-2);
+      transition: color 0.3s ease;
+    }
+    .all-work-card:hover .card-link { color: var(--white); }
+
+    .back-to-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      color: var(--grey-2);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      transition: color 0.3s ease, background 0.3s ease;
+    }
+    .back-to-top:hover { color: var(--white); background: rgba(255,255,255,0.03); }
+
+    @media (max-width: 768px) {
+      .page-wrap { padding: 100px 6vw 80px; }
+      .all-works-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+
+  <a href="index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back
+  </a>
+
+  <div class="page-wrap">
+    <div class="page-header">
+      <span class="section-label">Works</span>
+      <h1>All Projects</h1>
+      <p class="count" id="js-count"></p>
+    </div>
+
+    <div class="all-works-grid" id="js-all-works-grid"></div>
+
+    <a href="index.html" class="back-to-top">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      ポートフォリオに戻る
+    </a>
+  </div>
+
+  <script>
+    // Cursor
+    const cursorEl = document.querySelector('.cursor');
+    const trailEl  = document.querySelector('.cursor-trail');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+      if (cursorEl) { cursorEl.style.left = mx + 'px'; cursorEl.style.top = my + 'px'; }
+    });
+    (function loop() {
+      tx += (mx - tx) * 0.12; ty += (my - ty) * 0.12;
+      if (trailEl) { trailEl.style.left = tx + 'px'; trailEl.style.top = ty + 'px'; }
+      requestAnimationFrame(loop);
+    })();
+
+    // Scroll fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    // Load works
+    fetch('/site-data.json')
+      .then(r => r.json())
+      .then(data => {
+        const cards = data.works?.cards || [];
+        document.getElementById('js-count').textContent = `${cards.length} projects`;
+
+        const grid = document.getElementById('js-all-works-grid');
+        grid.innerHTML = cards.map((c, i) => {
+          const onClick = c.link.startsWith('http')
+            ? `window.open('${c.link}', '_blank')`
+            : `location.href='${c.link}'`;
+          const label = c.link.startsWith('http') ? 'View on GitHub →' : 'View Project →';
+          return `
+          <div class="all-work-card" onclick="${onClick}" style="transition-delay:${i * 60}ms">
+            <div class="all-work-card-inner">
+              <div class="work-tag">${c.tag}</div>
+              <h3>${c.title}</h3>
+              <p>${c.desc}</p>
+              <span class="card-link">${label}</span>
+            </div>
+          </div>`;
+        }).join('');
+
+        document.querySelectorAll('.all-work-card').forEach(el => observer.observe(el));
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

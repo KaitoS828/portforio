@@ -470,6 +470,32 @@ section {
   margin-bottom: 28px;
 }
 
+.works-view-all {
+  border: 1px solid var(--border);
+  border-top: none;
+  display: flex;
+  justify-content: center;
+}
+
+.works-view-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 40px;
+  color: var(--grey-2);
+  text-decoration: none;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  transition: color 0.3s ease, background 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+.works-view-all-btn:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.03);
+}
+
 .work-link {
   font-size: 0.65rem;
   font-weight: 200;

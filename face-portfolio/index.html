@@ -146,39 +146,14 @@
     <div class="works-inner">
       <span class="section-label">Works</span>
       <h2 id="js-works-heading">Selected<br>Projects</h2>
-      <div class="works-grid" id="js-works-grid">
-        <div class="work-card" data-index="0" onclick="location.href='works/the-board.html'" style="cursor:pointer">
-          <div class="work-card-inner">
-            <div class="work-tag">AI × UX</div>
-            <h3>The Board</h3>
-            <p>マルチエージェントAIが議論するリアルタイムボードルームシミュレーター。FastAPI + LangGraph + Gemini。</p>
-            <div class="work-link">View Project →</div>
-          </div>
-        </div>
-        <div class="work-card" data-index="1" onclick="location.href='works/face-portfolio.html'" style="cursor:pointer">
-          <div class="work-card-inner">
-            <div class="work-tag">3D × Web</div>
-            <h3>Face Portfolio</h3>
-            <p>Three.jsとGLBモデルを使ったインタラクティブな3Dポートフォリオ。このサイト自体。</p>
-            <div class="work-link">View Detail →</div>
-          </div>
-        </div>
-        <div class="work-card" data-index="2" onclick="location.href='works/remotion.html'" style="cursor:pointer">
-          <div class="work-card-inner">
-            <div class="work-tag">Motion × React</div>
-            <h3>Remotion Video</h3>
-            <p>Reactで動画を生成するモーショングラフィックスエンジン。コードで映像を作る次世代アプローチ。</p>
-            <div class="work-link">View Project →</div>
-          </div>
-        </div>
-        <div class="work-card" data-index="3" onclick="location.href='works/freemarket.html'" style="cursor:pointer">
-          <div class="work-card-inner">
-            <div class="work-tag">Full Stack</div>
-            <h3>Freemarket App</h3>
-            <p>Ruby on Railsで構築したフリーマーケットプラットフォーム。決済・認証・画像管理を実装。</p>
-            <div class="work-link">View Project →</div>
-          </div>
-        </div>
+      <div class="works-grid" id="js-works-grid"></div>
+      <div class="works-view-all">
+        <a href="all-works.html" class="works-view-all-btn">
+          <span id="js-works-count">All Projects</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -273,7 +248,7 @@
         // Works
         setHtml('js-works-heading', (d.works?.heading || '').replace(/\n/g, '<br>'));
         if (d.works?.cards) {
-          document.getElementById('js-works-grid').innerHTML = d.works.cards.map((c, i) => {
+          document.getElementById('js-works-grid').innerHTML = d.works.cards.slice(0, 5).map((c, i) => {
             const onClick = c.link.startsWith('http')
               ? `window.open('${c.link}', '_blank')`
               : `location.href='${c.link}'`;
@@ -288,6 +263,8 @@
               </div>
             </div>`;
           }).join('');
+          const total = d.works.cards.length;
+          document.getElementById('js-works-count').textContent = `${total} Projects`;
         }
 
         // Contact
