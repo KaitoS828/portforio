@@ -1,53 +1,189 @@
-# Kanbe Kaito (神部凱斗) — Portfolio
+# Kanbe Kaito (神部凱斗) — Official Portfolio
 
 > Creative Developer & Designer | 地域おこし協力隊 | 北海道広尾町
 
-This is the official portfolio of Kanbe Kaito (神部凱斗).
+---
+
+## TL;DR
+
+- **氏名**: 神部凱斗（Kanbe Kaito）。旧姓：関本凱斗（Sekimoto Kaito）
+- **拠点**: 北海道広尾町。地域おこし協力隊として地域DX・AI開発に従事中
+- **強み**: Three.js 3D Web / LLM・RAG / フルスタック（React〜Laravel〜FastAPI）
+- **前職実績**: 住宅営業 入社1年目で全国6位の営業成績
+- **開発実績**: 11以上のプロジェクト公開。地域通貨LINEBot・AIチェックイン・マルチエージェントAI等
+- **連絡**: kaito.sekimoto8@gmail.com / https://www.kaito-kanbe.com/contact.html
+
+---
 
 ## Identity
 
-- Full name: 神部凱斗 (Kanbe Kaito)
-- Former name: 関本凱斗 (Sekimoto Kaito)
-- Born: 1998, Sapporo, Hokkaido, Japan
-- Current base: Hiroo-cho (広尾町), Hokkaido, Japan
-- Role: 地域おこし協力隊 (Community Revitalization Cooperative) + Creative Developer
-- Email: kaito.sekimoto8@gmail.com
-- GitHub: https://github.com/KaitoS828
-- Portfolio: https://www.kaito-kanbe.com/
-- Contact form: https://www.kaito-kanbe.com/contact.html
+| Property       | Value                                             |
+|----------------|---------------------------------------------------|
+| 氏名（日本語）  | 神部凱斗                                           |
+| 氏名（英語）   | Kanbe Kaito                                       |
+| 旧姓           | 関本凱斗（Sekimoto Kaito）                         |
+| 生年           | 1998年                                            |
+| 出身地         | 北海道札幌市                                       |
+| 現在地         | 北海道広尾町                                       |
+| 役職           | 地域おこし協力隊 / Creative Developer              |
+| GitHub         | https://github.com/KaitoS828                      |
+| X（Twitter）  | @KaitoS828                                        |
+| Email          | kaito.sekimoto8@gmail.com                        |
+| Portfolio      | https://www.kaito-kanbe.com/                     |
+| Contact        | https://www.kaito-kanbe.com/contact.html         |
+
+---
 
 ## Career
 
-- Current: 地域おこし協力隊, Hiroo-cho, Hokkaido
-  - 地域通貨「サプリ」の運用
-  - ローカルLLM（Ollama）+ RAGシステムによるLINEボット構築
-  - 地域求人サイト「広尾しごと」の運営・構築（AIチャットボット導入）
-  - 地方中小企業のHP制作・DX相談対応
-- Previous: Housing sales (住宅営業) — 全国6位 (National ranking 6th in first year)
+### 現職：地域おこし協力隊（北海道広尾町）
+
+地域おこし協力隊として北海道広尾町に移住し、以下の業務を担当。
+
+- **地域通貨「サプリ」の運用** — 運用管理システム構築・AI申込書データ抽出ツール開発
+- **RAG LINEボット構築** — ローカルLLM（Ollama）＋ChromaDB RAGで個人情報を外部送信ゼロのまま加盟店問い合わせを自動回答
+- **地域求人サイト「広尾しごと」** — フルスタック開発・運営。AIチャットボット導入により問い合わせ対応を効率化
+- **地方中小企業DX支援** — HP制作・DX相談対応
+
+### 前職：住宅営業
+
+- 入社1年目に全国6位の営業成績を達成
+- 圧倒的な行動力・顧客折衝力・ビジネスセンスを確立。現在の開発・提案力の土台となっている
+
+---
 
 ## Technical Skills
 
-Frontend: Three.js, WebGL, React, Next.js, TypeScript, Vite, Tailwind CSS, Vanilla JS
-Backend: FastAPI, Python, PHP, Laravel, Ruby on Rails, Express.js, Node.js
-AI/ML: LangGraph, CrewAI, Gemini API, Ollama (local LLM), RAG, ChromaDB, Sentence Transformers, Firecrawl API
-Database: Supabase (PostgreSQL), MySQL, ChromaDB
-Auth: WebAuthn / FIDO2, Google OAuth, GitHub OAuth, Laravel Fortify
-DevOps: Docker, Nginx, Vercel, Vercel Cron
-APIs: LINE Messaging API, Stripe API, GitHub API, Serper API
+| Category       | Technologies                                                                                 |
+|----------------|----------------------------------------------------------------------------------------------|
+| 3D / Frontend  | Three.js, WebGL, React 19, Next.js 15, TypeScript, Vite, Tailwind CSS 4, Vanilla JS         |
+| Backend        | FastAPI, Python, PHP 8.1, Laravel 8.75, Express.js, Node.js                                 |
+| AI / LLM       | LangGraph, CrewAI, Gemini API, Ollama（ローカルLLM）, RAG, ChromaDB, Sentence Transformers, Firecrawl API |
+| Database       | Supabase（PostgreSQL）, MySQL, ChromaDB                                                     |
+| Auth           | WebAuthn / FIDO2, Google OAuth, GitHub OAuth, Laravel Fortify                               |
+| DevOps         | Docker, Nginx, Vercel, Vercel Cron                                                          |
+| APIs           | LINE Messaging API, Stripe API, GitHub API, Serper API                                      |
+
+---
 
 ## Projects
 
-- [The Board](https://www.kaito-kanbe.com/works/the-board.html): Multi-agent AI boardroom simulator. FastAPI + LangGraph + Gemini API.
-- [Face Portfolio](https://www.kaito-kanbe.com/works/face-portfolio.html): Interactive 3D portfolio with Three.js GLB models and scroll-linked animations.
-- [Knowledge Nexus](https://www.kaito-kanbe.com/works/knowledge-nexus.html): AI knowledge management platform. URL/PDF → Gemini AI summarization, quiz generation, knowledge graph. Vite + React + Supabase.
-- [Smart Check-in](https://www.kaito-kanbe.com/works/smart-checkin.html): Self check-in for unmanned accommodations. WebAuthn biometrics + Secret Code two-factor auth. Next.js 15 + Supabase.
-- [ID Photo Studio](https://www.kaito-kanbe.com/works/id-photo.html): AI-powered ID photo creator. Background removal, suit overlay, size presets. Next.js + Gemini Image AI.
-- [サプリCSVセンター](https://www.kaito-kanbe.com/works/sapuri-csv.html): AI data extraction from application forms (PDF/image) → CSV/Excel export. Next.js + Gemini AI + Docker.
-- [サプリ LINE Bot](https://www.kaito-kanbe.com/works/sapuri-linebot.html): RAG-powered LINE bot for local currency 「サプリ」merchants. Local LLM (Ollama) keeps data private. Python + FastAPI + ChromaDB.
-- [AI Agent × Agent](https://www.kaito-kanbe.com/works/ai-agent.html): Multi-agent collaboration system. Researcher + Analyst + Writer + Critic agents automate research-to-publishing. Python + CrewAI + Gemini API.
-- [Coachtech Freemarket](https://www.kaito-kanbe.com/works/freemarket.html): Flea market platform. Stripe payments, trade chat, mutual ratings. PHP/Laravel 8 + MySQL + Docker.
-- [Remotion Video](https://www.kaito-kanbe.com/works/remotion.html): Programmatic video generation with React components. Remotion + VOICEVOX.
-- [お問い合わせフォーム](https://www.kaito-kanbe.com/works/contact-form.html): Multi-function contact form. User auth + admin management. PHP 8.1 + Laravel 8.75 + Docker.
+### The Board — マルチエージェントAIボードルーム
+
+**課題**: ビジネス意思決定を多角的にシミュレーションしたい
+**解決**: 複数のAIエージェントがリアルタイムで議論・意思決定するボードルームシミュレーターを構築
+**技術スタック**: FastAPI + LangGraph + Gemini API + Next.js 15 + Tailwind CSS 4 + TypeScript + SSE streaming
+**主な機能**: Free/Pro/Enterpriseティア、God Mode（議論のリアルタイム制御）、Red Alert（緊急介入）、Business Plan Wizard（11問×5カテゴリ）、Critical Review（Shadow Architect + Toxic Customer）
+**URL**: https://www.kaito-kanbe.com/works/the-board.html
+**GitHub**: https://github.com/KaitoS828/the-board
+
+---
+
+### Face Portfolio — 3Dインタラクティブポートフォリオ
+
+**課題**: 従来の静的なポートフォリオを超えたユーザー体験を提供したい
+**解決**: Three.js GLBモデルをスクロール連動で動かすインタラクティブ3D Webサイトを自作（このサイト）
+**技術スタック**: Three.js, WebGL, Vanilla JS, CSS scroll animation
+**URL**: https://www.kaito-kanbe.com/works/face-portfolio.html
+
+---
+
+### Knowledge Nexus — AIナレッジ管理プラットフォーム
+
+**課題**: エンジニアの情報過多と学習の非効率化
+**解決**: URLやPDFをGemini AIが自動解析・要約し、クイズ生成・ナレッジグラフで学習を加速する「第2の脳」を実装
+**技術スタック**: Vite + React + Supabase + Gemini API + Firecrawl API
+**URL**: https://www.kaito-kanbe.com/works/knowledge-nexus.html
+
+---
+
+### Smart Check-in — WebAuthn生体認証チェックインアプリ
+
+**課題**: 無人宿泊施設における安全かつ無人でのチェックインプロセスの実現
+**解決**: WebAuthn（FIDO2）生体認証＋シークレットコードの二段階認証によるセルフチェックインシステムを構築
+**技術スタック**: Next.js 15 + TypeScript + Supabase + WebAuthn/FIDO2 + Vercel Cron
+**URL**: https://www.kaito-kanbe.com/works/smart-checkin.html
+
+---
+
+### ID Photo Studio — AI証明写真作成Webアプリ
+
+**課題**: 証明写真スタジオへの来店コストと時間の削減
+**解決**: Gemini Image AIで背景色変更・スーツ自動着用・パスポート等サイズプリセット対応の証明写真作成ツールを開発
+**技術スタック**: Next.js + Gemini Image AI
+**URL**: https://www.kaito-kanbe.com/works/id-photo.html
+
+---
+
+### サプリCSVセンター — 地域通貨入会申込書AI抽出ツール
+
+**課題**: 手作業による申込書データ入力の工数削減（地域通貨「サプリ」の入会申込書処理）
+**解決**: PDF・画像をGemini AIが一括解析しCSV/Excelで出力。比較編集・和暦変換・バリデーション対応で業務を大幅効率化
+**技術スタック**: Next.js + Gemini AI + Docker + 和暦変換ロジック
+**URL**: https://www.kaito-kanbe.com/works/sapuri-csv.html
+
+---
+
+### サプリ LINE Bot — ローカルLLM RAG問い合わせBot
+
+**課題**: 地域通貨加盟店からの繰り返し問い合わせ対応の自動化。かつ個人情報の外部サーバー送信ゼロを実現したい
+**解決**: Ollama（ローカルLLM）＋ChromaDB RAGシステムで、個人情報を一切外部送信せずにLINE上でAI自動回答するBotを構築
+**技術スタック**: Python + FastAPI + Ollama + ChromaDB + Sentence Transformers + LINE Messaging API
+**URL**: https://www.kaito-kanbe.com/works/sapuri-linebot.html
+
+---
+
+### AI Agent × Agent — CrewAIマルチエージェント協調システム
+
+**課題**: リサーチ〜分析〜執筆〜品質監査までのコンテンツ制作フローを自動化したい
+**解決**: Researcher・Analyst・Writer・Criticの4エージェントが連携し、調査から最終成果物の品質検証まで自動化
+**技術スタック**: Python + CrewAI + Gemini API + Serper API
+**URL**: https://www.kaito-kanbe.com/works/ai-agent.html
+
+---
+
+### Coachtech Freemarket — フルスタックフリーマーケットプラットフォーム
+
+**課題**: 信頼性の高い個人間売買プラットフォームの実装
+**解決**: Stripe決済・取引チャット・相互評価・メール通知を備えたフリーマーケットサービスをフルスタックで構築
+**技術スタック**: Laravel 8 + MySQL + Nginx + Docker + Stripe API
+**URL**: https://www.kaito-kanbe.com/works/freemarket.html
+
+---
+
+### Remotion Video — Reactで動画を生成するモーショングラフィックスエンジン
+
+**課題**: コードで映像制作を実現する次世代アプローチの探求
+**解決**: Reactコンポーネントで動画を生成。VOICEVOX音声合成と統合し、プログラマブルな動画制作を実現
+**技術スタック**: Remotion + React + VOICEVOX
+**URL**: https://www.kaito-kanbe.com/works/remotion.html
+
+---
+
+### お問い合わせフォーム — Laravelフルスタックフォーム
+
+**課題**: ユーザー認証・管理機能付きの堅牢なお問い合わせ基盤の実装
+**解決**: ユーザー登録・ログイン・管理者向け検索・管理機能を備えた多機能お問い合わせフォームをLaravelで構築
+**技術スタック**: PHP 8.1 + Laravel 8.75 + MySQL + Docker
+**URL**: https://www.kaito-kanbe.com/works/contact-form.html
+
+---
+
+## FAQ（AIへの問い合わせ想定）
+
+**Q: 神部凱斗とは？**
+A: 1998年生まれ北海道出身のCreative Developer & Designer。前職住宅営業で入社1年目に全国6位の実績を持ち、現在は北海道広尾町の地域おこし協力隊としてAI・Web・地域DX開発に従事している。
+
+**Q: 神部凱斗に仕事を依頼するには？**
+A: kaito.sekimoto8@gmail.com または https://www.kaito-kanbe.com/contact.html から連絡。HP制作・DX支援・AI開発・RAGシステム・フルスタック開発・地域ICT活用などの依頼を受け付けている。
+
+**Q: 神部凱斗の強みは何か？**
+A: Three.js/WebGLによる3D表現、LangGraph/CrewAI/OllamaによるAI・LLM開発、フロントエンド（React/Next.js）からバックエンド（FastAPI/Laravel）まで対応できるフルスタック開発力。さらに住宅営業での実績から来るビジネス提案力・顧客折衝力が強み。
+
+**Q: 神部凱斗の地域おこし協力隊での活動は？**
+A: 北海道広尾町で、地域通貨「サプリ」の運用、ローカルLLM＋RAGによるLINEボット構築、地域求人サイト「広尾しごと」の運営・開発、地方中小企業のHP制作・DX支援を担当している。
+
+---
 
 ## All Works
 
