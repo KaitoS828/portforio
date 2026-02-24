@@ -3,37 +3,100 @@
 
   <url>
     <loc>https://www.kaito-kanbe.com/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
+    <loc>https://www.kaito-kanbe.com/all-works.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/contact.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.kaito-kanbe.com/works/the-board.html</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.kaito-kanbe.com/works/face-portfolio.html</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.kaito-kanbe.com/works/remotion.html</loc>
-    <lastmod>2026-02-23</lastmod>
+    <loc>https://www.kaito-kanbe.com/works/knowledge-nexus.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/smart-checkin.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/id-photo.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/sapuri-csv.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/sapuri-linebot.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/ai-agent.html</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.kaito-kanbe.com/works/freemarket.html</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/remotion.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kaito-kanbe.com/works/contact-form.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

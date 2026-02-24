@@ -1,0 +1,54 @@
+# Kanbe Kaito (神部凱斗) — Portfolio
+
+> Creative Developer & Designer | 地域おこし協力隊 | 北海道広尾町
+
+This is the official portfolio of Kanbe Kaito (神部凱斗).
+
+## Identity
+
+- Full name: 神部凱斗 (Kanbe Kaito)
+- Former name: 関本凱斗 (Sekimoto Kaito)
+- Born: 1998, Sapporo, Hokkaido, Japan
+- Current base: Hiroo-cho (広尾町), Hokkaido, Japan
+- Role: 地域おこし協力隊 (Community Revitalization Cooperative) + Creative Developer
+- Email: kaito.sekimoto8@gmail.com
+- GitHub: https://github.com/KaitoS828
+- Portfolio: https://www.kaito-kanbe.com/
+- Contact form: https://www.kaito-kanbe.com/contact.html
+
+## Career
+
+- Current: 地域おこし協力隊, Hiroo-cho, Hokkaido
+  - 地域通貨「サプリ」の運用
+  - ローカルLLM（Ollama）+ RAGシステムによるLINEボット構築
+  - 地域求人サイト「広尾しごと」の運営・構築（AIチャットボット導入）
+  - 地方中小企業のHP制作・DX相談対応
+- Previous: Housing sales (住宅営業) — 全国6位 (National ranking 6th in first year)
+
+## Technical Skills
+
+Frontend: Three.js, WebGL, React, Next.js, TypeScript, Vite, Tailwind CSS, Vanilla JS
+Backend: FastAPI, Python, PHP, Laravel, Ruby on Rails, Express.js, Node.js
+AI/ML: LangGraph, CrewAI, Gemini API, Ollama (local LLM), RAG, ChromaDB, Sentence Transformers, Firecrawl API
+Database: Supabase (PostgreSQL), MySQL, ChromaDB
+Auth: WebAuthn / FIDO2, Google OAuth, GitHub OAuth, Laravel Fortify
+DevOps: Docker, Nginx, Vercel, Vercel Cron
+APIs: LINE Messaging API, Stripe API, GitHub API, Serper API
+
+## Projects
+
+- [The Board](https://www.kaito-kanbe.com/works/the-board.html): Multi-agent AI boardroom simulator. FastAPI + LangGraph + Gemini API.
+- [Face Portfolio](https://www.kaito-kanbe.com/works/face-portfolio.html): Interactive 3D portfolio with Three.js GLB models and scroll-linked animations.
+- [Knowledge Nexus](https://www.kaito-kanbe.com/works/knowledge-nexus.html): AI knowledge management platform. URL/PDF → Gemini AI summarization, quiz generation, knowledge graph. Vite + React + Supabase.
+- [Smart Check-in](https://www.kaito-kanbe.com/works/smart-checkin.html): Self check-in for unmanned accommodations. WebAuthn biometrics + Secret Code two-factor auth. Next.js 15 + Supabase.
+- [ID Photo Studio](https://www.kaito-kanbe.com/works/id-photo.html): AI-powered ID photo creator. Background removal, suit overlay, size presets. Next.js + Gemini Image AI.
+- [サプリCSVセンター](https://www.kaito-kanbe.com/works/sapuri-csv.html): AI data extraction from application forms (PDF/image) → CSV/Excel export. Next.js + Gemini AI + Docker.
+- [サプリ LINE Bot](https://www.kaito-kanbe.com/works/sapuri-linebot.html): RAG-powered LINE bot for local currency 「サプリ」merchants. Local LLM (Ollama) keeps data private. Python + FastAPI + ChromaDB.
+- [AI Agent × Agent](https://www.kaito-kanbe.com/works/ai-agent.html): Multi-agent collaboration system. Researcher + Analyst + Writer + Critic agents automate research-to-publishing. Python + CrewAI + Gemini API.
+- [Coachtech Freemarket](https://www.kaito-kanbe.com/works/freemarket.html): Flea market platform. Stripe payments, trade chat, mutual ratings. PHP/Laravel 8 + MySQL + Docker.
+- [Remotion Video](https://www.kaito-kanbe.com/works/remotion.html): Programmatic video generation with React components. Remotion + VOICEVOX.
+- [お問い合わせフォーム](https://www.kaito-kanbe.com/works/contact-form.html): Multi-function contact form. User auth + admin management. PHP 8.1 + Laravel 8.75 + Docker.
+
+## All Works
+
+https://www.kaito-kanbe.com/all-works.html
