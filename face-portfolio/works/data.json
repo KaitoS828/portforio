@@ -52,7 +52,7 @@
     "year": "2025",
     "type": "Personal Project",
     "mockUrl": "www.kaito-kanbe.com",
-    "mockImage": "https://res.cloudinary.com/dx8tuovqx/image/upload/v1771942828/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-02-24_23.18.46_sc4gvm.png",
+    "mockImage": "/assets/face-portfolio-screenshot.png",
     "mockLabel": "3D Interactive Portfolio",
     "overviewHeading": "3Dキャラクターと共に\n魅せるポートフォリオ",
     "overviewBody": "Three.js を活用した3Dキャラクターアニメーションをメインビジュアルに据えたポートフォリオサイト。スクロールに連動してキャラクターが切り替わり、サイト全体でインタラクティブな体験を提供します。",
