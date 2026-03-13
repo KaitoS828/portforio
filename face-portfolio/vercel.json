@@ -1,9 +1,4 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "errors": [
-    { "statusCode": 404, "serve": "/404.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
