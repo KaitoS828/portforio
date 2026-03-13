@@ -7,7 +7,7 @@
     "year": "2025",
     "type": "Personal Project",
     "mockUrl": "the-board.vercel.app",
-    "mockImage": "",
+    "mockImage": "/assets/the-board-screenshot.png",
     "mockLabel": "AI Multi-Agent Boardroom",
     "overviewHeading": "AIエージェントが\n議論するプラットフォーム",
     "overviewBody": "複数のAIエージェントがリアルタイムで議論・意思決定を行うウェブアプリケーション。ビジネスプランの策定から批判的レビューまで、AIが自律的に協働するプロセスを可視化します。",
@@ -213,7 +213,7 @@
       "CSS"
     ],
     "ctaHeading": "AIで証明写真の\n撮り直しをなくす",
-    "liveUrl": "#",
+    "liveUrl": "https://id-photo-delta.vercel.app/",
     "githubUrl": "https://github.com/KaitoS828/id-photo",
     "prev": "smart-checkin",
     "next": "sapuri-csv",
