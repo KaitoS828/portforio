@@ -23,7 +23,6 @@
     "rightItems": [
       "Agent orchestration via LangGraph",
       "Real-time output via SSE streaming",
-      "Gemini API (structured output)",
       "PDF export (window.print)",
       "Next.js Rewrite for API proxy integration"
     ],
@@ -31,7 +30,6 @@
       "Next.js 15",
       "FastAPI",
       "LangGraph",
-      "Gemini API",
       "Tailwind CSS 4",
       "Python",
       "TypeScript"
@@ -141,37 +139,38 @@
     "type": "Personal Project",
     "mockUrl": "smart-checkin.vercel.app",
     "mockImage": "",
-    "mockLabel": "Self Check-in for Unmanned Accommodations",
-    "overviewHeading": "Self Check-in App\nfor Unstaffed Accommodations",
-    "overviewBody": "A web app that enables secure check-in without front desk staff, using WebAuthn biometric authentication and a Secret Code for two-factor verification. Administrators can manage reservations and issue guest registration URLs from a dashboard.",
+    "mockLabel": "Self Check-in for Accommodations",
+    "overviewHeading": "Self Check-in System\nfor Accommodations",
+    "overviewBody": "Guests register their stay information in advance and complete self-check-in with a secret code and password. Administrators verify identity via video call and can centrally manage multiple properties, with Gmail/LINE notifications and Google Calendar integration.",
     "leftLabel": "Features",
     "leftItems": [
       "Admin Dashboard: reservation creation, management, and Secret Code auto-generation",
-      "Guest Registration: occupant form input and passkey enrollment",
-      "Check-in: usernameless biometric auth + Secret Code verification",
-      "Smart lock PIN display after check-in completion",
-      "Automatic deletion of expired challenges (Vercel Cron)"
+      "Guest Registration: occupant form input and passport photo upload",
+      "Check-in: usernameless biometric auth + video call identity verification",
+      "Check-in notifications: instant Gmail & LINE alerts on guest arrival",
+      "Multi-property management, Google Calendar sync, CSV export, 4-language support"
     ],
     "rightLabel": "Technical Highlights",
     "rightItems": [
-      "FIDO2 / WebAuthn (@simplewebauthn) passkey authentication",
-      "Row-level security via Supabase RLS",
-      "Server-side validation with Zod",
-      "Next.js 15 App Router + TypeScript",
-      "Periodic cleanup with Vercel Cron"
+      "HMAC-SHA256 signed session tokens (Edge Runtime compatible)",
+      "Video call identity verification via Whereby API",
+      "Password hashing with bcryptjs",
+      "Server-side schema validation with Zod",
+      "Gmail (nodemailer), LINE, and Google Calendar integrations"
     ],
     "techStack": [
-      "Next.js 15",
+      "Next.js 16",
       "TypeScript",
       "Tailwind CSS 4",
       "Supabase",
-      "WebAuthn",
+      "Whereby API",
+      "bcryptjs",
       "Zod",
       "Vercel"
     ],
-    "ctaHeading": "A Smarter Stay Experience\nThrough Biometric Auth",
+    "ctaHeading": "A Smarter Stay Experience\nThrough Video Call Verification",
     "liveUrl": "#",
-    "githubUrl": "https://github.com/KaitoS828/smart_check_in",
+    "githubUrl": "https://github.com/KaitoS828/smart-checkin-v2",
     "prev": "knowledge-nexus",
     "next": "id-photo",
     "prevLabel": "Knowledge Nexus",
@@ -228,7 +227,7 @@
     "year": "2025",
     "type": "Business Tool",
     "mockUrl": "sapuri-csv.local",
-    "mockImage": "/assets/sapuri-csv-screenshot.png",
+    "mockImage": "",
     "mockLabel": "AI Data Extraction Tool",
     "overviewHeading": "入会申込書データを\nAIが自動抽出",
     "overviewBody": "PDF（マルチページ対応）や画像を一括で読み込み、AIがデータを抽出します。すべての処理を自社環境内で完結することで、個人情報を外部に送信しない安全な運用を実現します。",
@@ -398,52 +397,8 @@
     "liveUrl": "#",
     "githubUrl": "https://github.com/KaitoS828/coachtech_freemarket",
     "prev": "ai-agent",
-    "next": "remotion",
-    "prevLabel": "AI Agent × Agent",
-    "nextLabel": "Remotion Video"
-  },
-  "remotion": {
-    "id": "remotion",
-    "title": "Remotion Video",
-    "tag": "Video / React",
-    "role": "Frontend Engineer",
-    "year": "2025",
-    "type": "Personal Project",
-    "mockUrl": "remotion-project.vercel.app",
-    "mockImage": "",
-    "mockLabel": "Programmatic Video Generation",
-    "overviewHeading": "Generate Video From Code\nWith React",
-    "overviewBody": "A project that produces video as React components using Remotion. Animations, text, and audio are combined programmatically to achieve video expression through code.",
-    "leftLabel": "Features",
-    "leftItems": [
-      "Define video structure with React components",
-      "Frame-level animation control",
-      "Voice synthesis integration template with VOICEVOX",
-      "Timeline management and asset compositing",
-      "MP4 export support"
-    ],
-    "rightLabel": "Technical Highlights",
-    "rightItems": [
-      "Leveraging Remotion's interpolate / spring API",
-      "Frame-synchronized animation with useCurrentFrame",
-      "Scene management with Sequence component",
-      "Styled with Tailwind CSS",
-      "Rendering job management via Node.js API"
-    ],
-    "techStack": [
-      "Remotion",
-      "React",
-      "TypeScript",
-      "VOICEVOX",
-      "Node.js",
-      "Tailwind CSS"
-    ],
-    "ctaHeading": "A New Experience of\nCreating Video With Code",
-    "liveUrl": "#",
-    "githubUrl": "https://github.com/KaitoS828/remotion-voicevox-template",
-    "prev": "freemarket",
     "next": "contact-form",
-    "prevLabel": "Coachtech Freemarket",
+    "prevLabel": "AI Agent × Agent",
     "nextLabel": "Contact Form"
   },
   "contact-form": {
@@ -485,9 +440,9 @@
     "ctaHeading": "A Work That Solidified\nLaravel Fundamentals",
     "liveUrl": "#",
     "githubUrl": "https://github.com/KaitoS828/Confirmation-test",
-    "prev": "remotion",
+    "prev": "freemarket",
     "next": null,
-    "prevLabel": "Remotion Video",
+    "prevLabel": "Coachtech Freemarket",
     "nextLabel": ""
   }
 }

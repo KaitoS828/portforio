@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Smart Check-in — Kanbe Kaito</title>
-  <meta name="description" content="無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証とSecret Codeの二段階認証を実装。">
+  <meta name="description" content="無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証 + Wherebyビデオ通話による本人確認でセキュアなチェックインを実現。">
   <meta name="author" content="Kanbe Kaito">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.kaito-kanbe.com/works/smart-checkin.html">
@@ -16,21 +16,21 @@
   <meta property="og:type"        content="article">
   <meta property="og:url"         content="https://www.kaito-kanbe.com/works/smart-checkin.html">
   <meta property="og:title"       content="Smart Check-in — Kanbe Kaito">
-  <meta property="og:description" content="無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証とSecret Codeの二段階認証を実装。">
+  <meta property="og:description" content="無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証 + Wherebyビデオ通話による本人確認でセキュアなチェックインを実現。">
   <meta property="og:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:creator"     content="@KaitoS828">
+  <meta name="twitter:creator"     content="@sk8017000220838">
   <meta name="twitter:title"       content="Smart Check-in — Kanbe Kaito">
-  <meta name="twitter:description" content="無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証とSecret Codeの二段階認証を実装。">
+  <meta name="twitter:description" content="無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証 + Wherebyビデオ通話による本人確認でセキュアなチェックインを実現。">
   <meta name="twitter:image"       content="https://www.kaito-kanbe.com/assets/og-image.png">
-  <meta name="twitter:site"        content="@KaitoS828">
+  <meta name="twitter:site"        content="@sk8017000220838">
   <meta name="twitter:image:alt"   content="Smart Check-in — WebAuthn Self Check-in App by Kanbe Kaito">
   <meta property="og:image:alt"    content="Smart Check-in — WebAuthn 生体認証チェックイン by 神部凱斗 (Kanbe Kaito)">
   <meta property="og:locale"       content="ja_JP">
   <meta property="og:site_name"    content="神部凱斗 Portfolio">
-  <meta name="keywords"            content="Smart Check-in, WebAuthn, FIDO2, 生体認証, パスキー, Next.js 15, Supabase, セキュリティ, 無人施設, セルフチェックイン, Vercel Cron, 神部凱斗, Kanbe Kaito">
+  <meta name="keywords"            content="Smart Check-in, WebAuthn, FIDO2, 生体認証, パスキー, Next.js 16, Supabase, Whereby, ビデオ通話, セキュリティ, 無人施設, セルフチェックイン, 神部凱斗, Kanbe Kaito">
   <script type="application/ld+json">
   [
     {
@@ -49,8 +49,8 @@
       "name": "Smart Check-in",
       "applicationCategory": "WebApplication",
       "applicationSubCategory": "Security / Authentication",
-      "description": "無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証＋シークレットコードの二段階認証でセキュアなチェックインを実現。",
-      "keywords": ["WebAuthn", "FIDO2", "生体認証", "Next.js", "Supabase", "セキュリティ", "無人施設", "チェックイン"],
+      "description": "無人宿泊施設向けセルフチェックインアプリ。WebAuthn生体認証＋Wherebyビデオ通話による本人確認でセキュアなチェックインを実現。",
+      "keywords": ["WebAuthn", "FIDO2", "生体認証", "Whereby", "ビデオ通話", "Next.js", "Supabase", "セキュリティ", "無人施設", "チェックイン"],
       "author": { "@type": "Person", "@id": "https://www.kaito-kanbe.com/#person", "name": "Kanbe Kaito", "url": "https://www.kaito-kanbe.com/" },
       "programmingLanguage": ["TypeScript", "Next.js", "Python"],
       "url": "https://www.kaito-kanbe.com/works/smart-checkin.html",
@@ -166,26 +166,28 @@
     <h1>Smart Check-in — 無人宿泊施設向けセルフチェックインアプリ</h1>
     <p><strong>作成者:</strong> 神部凱斗 (Kanbe Kaito) | <strong>Role:</strong> Full Stack Engineer | <strong>Year:</strong> 2025 | <strong>Type:</strong> Personal Project</p>
     <h2>概要</h2>
-    <p>WebAuthn生体認証とSecret Codeによる二段階認証で、フロントスタッフ不在でも安全にチェックインできるWebアプリ。管理者はダッシュボードで予約管理・ゲスト登録URLの発行が可能です。</p>
+    <p>WebAuthn生体認証 + Wherebyビデオ通話による本人確認で、フロントスタッフ不在でも安全にチェックインできるWebアプリ。管理者はダッシュボードで予約管理・ゲスト登録URLの発行・シークレットコード管理が可能です。</p>
     <h2>主な機能</h2>
     <ul>
-      <li>Admin Dashboard：予約作成・管理、Secret Code自動生成</li>
+      <li>Admin Dashboard：予約作成・管理、シークレットコード自動生成</li>
       <li>Guest Registration：宿泊者名簿入力、パスキー登録</li>
-      <li>Check-in：Usernameless生体認証 + Secret Code検証</li>
-      <li>スマートロックPIN表示（チェックイン完了後）</li>
-      <li>期限切れChallenge自動削除（Vercel Cron）</li>
+      <li>Check-in：Usernameless生体認証 + ビデオ通話本人確認</li>
+      <li>Whereby API連携によるセキュアなビデオ通話ルーム自動生成</li>
+      <li>HMAC-SHA256セッション検証・bcryptjsパスワードハッシュ</li>
+      <li>nodemailerメール通知・LINE通知・Google Calendar連携</li>
     </ul>
     <h2>技術ハイライト</h2>
     <ul>
       <li>FIDO2 / WebAuthn（@simplewebauthn）でパスキー認証</li>
+      <li>Whereby API によるビデオ通話ルーム自動生成・本人確認</li>
+      <li>HMAC-SHA256によるセッショントークン検証</li>
       <li>Supabase RLSで行レベルセキュリティ</li>
       <li>Zod によるサーバーサイドバリデーション</li>
-      <li>Next.js 15 App Router + TypeScript</li>
-      <li>Vercel Cronで定期クリーンアップ</li>
+      <li>Next.js 16 App Router + TypeScript</li>
     </ul>
     <h2>技術スタック</h2>
-    <p>Next.js 15 / TypeScript / Tailwind CSS 4 / Supabase / WebAuthn / Zod / Vercel</p>
-    <p><a href="https://github.com/KaitoS828/smart_check_in">GitHub: github.com/KaitoS828/smart_check_in</a></p>
+    <p>Next.js 16 / TypeScript / Tailwind CSS 4 / Supabase / WebAuthn / Whereby API / bcryptjs / Zod / nodemailer</p>
+    <p><a href="https://github.com/KaitoS828/smart-checkin-v2">GitHub: github.com/KaitoS828/smart-checkin-v2</a></p>
     <p><a href="https://www.kaito-kanbe.com/">作成者ポートフォリオ: kaito-kanbe.com</a></p>
   </article>
   </noscript>

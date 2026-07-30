@@ -23,7 +23,6 @@
     "rightItems": [
       "LangGraph によるエージェントオーケストレーション",
       "SSE ストリーミングでリアルタイム出力",
-      "Gemini API（structured output）",
       "PDF エクスポート（window.print）",
       "Next.js Rewrite で API プロキシ統合"
     ],
@@ -31,7 +30,6 @@
       "Next.js 15",
       "FastAPI",
       "LangGraph",
-      "Gemini API",
       "Tailwind CSS 4",
       "Python",
       "TypeScript"
@@ -141,37 +139,38 @@
     "type": "Personal Project",
     "mockUrl": "smart-checkin.vercel.app",
     "mockImage": "",
-    "mockLabel": "Self Check-in for Unmanned Accommodations",
-    "overviewHeading": "無人宿泊施設向け\nセルフチェックインアプリ",
-    "overviewBody": "WebAuthn生体認証とSecret Codeによる二段階認証で、フロントスタッフ不在でも安全にチェックインできるWebアプリ。管理者はダッシュボードで予約管理・ゲスト登録URLの発行が可能です。",
+    "mockLabel": "Self Check-in for Accommodations",
+    "overviewHeading": "宿泊施設向け\nセルフチェックインシステム",
+    "overviewBody": "ゲストが事前に宿泊者情報を登録し、当日はシークレットコード＋パスワード認証でセルフチェックインを完結。管理者はビデオ通話で本人確認を行い、複数物件の一元管理・Gmail/LINE通知・Google Calendar連携が可能な非対面チェックインプラットフォーム。",
     "leftLabel": "Features",
     "leftItems": [
       "Admin Dashboard：予約作成・管理、Secret Code自動生成",
-      "Guest Registration：宿泊者名簿入力、パスキー登録",
-      "Check-in：Usernameless生体認証 + Secret Code検証",
-      "スマートロックPIN表示（チェックイン完了後）",
-      "期限切れChallenge自動削除（Vercel Cron）"
+      "Guest Registration：宿泊者名簿入力、パスポート画像アップロード",
+      "Check-in：Usernameless生体認証 + ビデオ通話本人確認",
+      "チェックイン通知：ゲスト到着時にGmail・LINEへ即時通知",
+      "複数物件管理・Google Calendar連携・CSV出力・多言語対応(4言語)"
     ],
     "rightLabel": "Technical Highlights",
     "rightItems": [
-      "FIDO2 / WebAuthn（@simplewebauthn）でパスキー認証",
-      "Supabase RLSで行レベルセキュリティ",
+      "HMAC-SHA256署名付きセッショントークン（Edge Runtime対応）",
+      "Whereby APIによるビデオ通話本人確認",
+      "bcryptjs によるパスワードハッシュ化",
       "Zod によるサーバーサイドバリデーション",
-      "Next.js 15 App Router + TypeScript",
-      "Vercel Cronで定期クリーンアップ"
+      "Gmail（nodemailer）・LINE・Google Calendar 外部連携"
     ],
     "techStack": [
-      "Next.js 15",
+      "Next.js 16",
       "TypeScript",
       "Tailwind CSS 4",
       "Supabase",
-      "WebAuthn",
+      "Whereby API",
+      "bcryptjs",
       "Zod",
       "Vercel"
     ],
-    "ctaHeading": "生体認証で実現する\nスマートな宿泊体験",
+    "ctaHeading": "ビデオ通話本人確認で実現する\nスマートな宿泊体験",
     "liveUrl": "#",
-    "githubUrl": "https://github.com/KaitoS828/smart_check_in",
+    "githubUrl": "https://github.com/KaitoS828/smart-checkin-v2",
     "prev": "knowledge-nexus",
     "next": "id-photo",
     "prevLabel": "Knowledge Nexus",
@@ -228,7 +227,7 @@
     "year": "2025",
     "type": "Business Tool",
     "mockUrl": "sapuri-csv.local",
-    "mockImage": "/assets/sapuri-csv-screenshot.png",
+    "mockImage": "",
     "mockLabel": "AI Data Extraction Tool",
     "overviewHeading": "入会申込書データを\nAIが自動抽出",
     "overviewBody": "PDF（マルチページ対応）や画像を一括で読み込み、AIがデータを抽出します。すべての処理を自社環境内で完結することで、個人情報を外部に送信しない安全な運用を実現します。",
@@ -398,52 +397,8 @@
     "liveUrl": "#",
     "githubUrl": "https://github.com/KaitoS828/coachtech_freemarket",
     "prev": "ai-agent",
-    "next": "remotion",
-    "prevLabel": "AI Agent × Agent",
-    "nextLabel": "Remotion Video"
-  },
-  "remotion": {
-    "id": "remotion",
-    "title": "Remotion Video",
-    "tag": "Video / React",
-    "role": "Frontend Engineer",
-    "year": "2025",
-    "type": "Personal Project",
-    "mockUrl": "remotion-project.vercel.app",
-    "mockImage": "",
-    "mockLabel": "Programmatic Video Generation",
-    "overviewHeading": "Reactでコードから\n動画を生成する",
-    "overviewBody": "Remotion を使用し、React コンポーネントとして動画を制作するプロジェクト。アニメーション・テキスト・音声をプログラマブルに組み合わせ、コードから映像表現を実現します。",
-    "leftLabel": "Features",
-    "leftItems": [
-      "React コンポーネントで動画構成を定義",
-      "フレーム単位のアニメーション制御",
-      "VOICEVOX との音声連携テンプレート",
-      "タイムライン管理と素材の合成",
-      "MP4 エクスポート対応"
-    ],
-    "rightLabel": "Technical Highlights",
-    "rightItems": [
-      "Remotion の interpolate / spring API を活用",
-      "useCurrentFrame でフレーム同期アニメーション",
-      "Sequence コンポーネントでシーン管理",
-      "Tailwind CSS でスタイリング",
-      "Node.js API でレンダリングジョブ管理"
-    ],
-    "techStack": [
-      "Remotion",
-      "React",
-      "TypeScript",
-      "VOICEVOX",
-      "Node.js",
-      "Tailwind CSS"
-    ],
-    "ctaHeading": "コードで動画を\nつくる新しい体験",
-    "liveUrl": "#",
-    "githubUrl": "https://github.com/KaitoS828/remotion-voicevox-template",
-    "prev": "freemarket",
     "next": "contact-form",
-    "prevLabel": "Coachtech Freemarket",
+    "prevLabel": "AI Agent × Agent",
     "nextLabel": "お問い合わせフォーム"
   },
   "contact-form": {
@@ -485,9 +440,9 @@
     "ctaHeading": "Laravelの基礎を\n固めた作品",
     "liveUrl": "#",
     "githubUrl": "https://github.com/KaitoS828/Confirmation-test",
-    "prev": "remotion",
+    "prev": "freemarket",
     "next": null,
-    "prevLabel": "Remotion Video",
+    "prevLabel": "Coachtech Freemarket",
     "nextLabel": ""
   }
 }

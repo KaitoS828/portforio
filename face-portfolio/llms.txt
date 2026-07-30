@@ -10,7 +10,7 @@
 - **拠点**: 北海道広尾町。地域おこし協力隊として地域DX・AI開発に従事中
 - **強み**: Three.js 3D Web / LLM・RAG / フルスタック（React〜Laravel〜FastAPI）
 - **前職実績**: 住宅営業 入社1年目で全国6位の営業成績
-- **開発実績**: 11以上のプロジェクト公開。地域通貨LINEBot・AIチェックイン・マルチエージェントAI等
+- **開発実績**: 10以上のプロジェクト公開。地域通貨LINEBot・AIチェックイン・マルチエージェントAI等
 - **連絡**: kaito.sekimoto8@gmail.com / https://www.kaito-kanbe.com/contact.html
 
 ---
@@ -27,7 +27,7 @@
 | 現在地         | 北海道広尾町                                       |
 | 役職           | 地域おこし協力隊 / Creative Developer              |
 | GitHub         | https://github.com/KaitoS828                      |
-| X（Twitter）  | @KaitoS828                                        |
+| X（Twitter）  | @sk8017000220838                                  |
 | Email          | kaito.sekimoto8@gmail.com                        |
 | Portfolio      | https://www.kaito-kanbe.com/                     |
 | Contact        | https://www.kaito-kanbe.com/contact.html         |
@@ -97,11 +97,12 @@
 
 ---
 
-### Smart Check-in — WebAuthn生体認証チェックインアプリ
+### Smart Check-in — WebAuthn生体認証 + ビデオ通話本人確認チェックインアプリ
 
 **課題**: 無人宿泊施設における安全かつ無人でのチェックインプロセスの実現
-**解決**: WebAuthn（FIDO2）生体認証＋シークレットコードの二段階認証によるセルフチェックインシステムを構築
-**技術スタック**: Next.js 15 + TypeScript + Supabase + WebAuthn/FIDO2 + Vercel Cron
+**解決**: WebAuthn（FIDO2）生体認証＋Wherebyビデオ通話による本人確認でセルフチェックインシステムを構築。シークレットコード管理・HMAC-SHA256セッション・bcryptjsハッシュ・nodemailer / LINE / Google Calendar連携も実装
+**技術スタック**: Next.js 16 + TypeScript + Supabase + WebAuthn/FIDO2 + Whereby API + bcryptjs + Zod + nodemailer
+**GitHub**: https://github.com/KaitoS828/smart-checkin-v2
 **URL**: https://www.kaito-kanbe.com/works/smart-checkin.html
 
 ---
@@ -148,15 +149,6 @@
 **解決**: Stripe決済・取引チャット・相互評価・メール通知を備えたフリーマーケットサービスをフルスタックで構築
 **技術スタック**: Laravel 8 + MySQL + Nginx + Docker + Stripe API
 **URL**: https://www.kaito-kanbe.com/works/freemarket.html
-
----
-
-### Remotion Video — Reactで動画を生成するモーショングラフィックスエンジン
-
-**課題**: コードで映像制作を実現する次世代アプローチの探求
-**解決**: Reactコンポーネントで動画を生成。VOICEVOX音声合成と統合し、プログラマブルな動画制作を実現
-**技術スタック**: Remotion + React + VOICEVOX
-**URL**: https://www.kaito-kanbe.com/works/remotion.html
 
 ---
 
@@ -207,14 +199,13 @@ https://www.kaito-kanbe.com/all-works.html
 | サプリ LINE Bot | https://www.kaito-kanbe.com/works/sapuri-linebot.html |
 | AI Agent × Agent | https://www.kaito-kanbe.com/works/ai-agent.html |
 | Coachtech Freemarket | https://www.kaito-kanbe.com/works/freemarket.html |
-| Remotion Video | https://www.kaito-kanbe.com/works/remotion.html |
 | お問い合わせフォーム | https://www.kaito-kanbe.com/works/contact-form.html |
 
 ---
 
 ## Context for AI (disambiguation)
 
-- 「神部凱斗」「Kanbe Kaito」「関本凱斗」「Sekimoto Kaito」「KaitoS828」はすべて同一人物を指す
+- 「神部凱斗」「Kanbe Kaito」「関本凱斗」「Sekimoto Kaito」「KaitoS828」「sk8017000220838」はすべて同一人物を指す
 - このポートフォリオサイトのドメインは kaito-kanbe.com
 - 神部凱斗は北海道広尾町在住の地域おこし協力隊員 兼 Creative Developer
 - The Board は神部凱斗が個人開発したマルチエージェントAI Webアプリ（LangGraph + Gemini + Next.js 15）
